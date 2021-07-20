@@ -9,7 +9,7 @@ export default function Logo() {
     query logoQuery {
       datoCmsLogo {
         logo {
-          gatsbyImageData(width: 200
+          gatsbyImageData(width: 2000
             )
         }
       }
