@@ -1,0 +1,48 @@
+p, label{
+    font-family:"Nanum Gothic";
+    color:#65430A;
+    text-align: justify;
+
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+header a, h1,h2,h3,h4,h5,h6{
+    font-family: "Cormorant";
+    color:#65430A;
+}
+
+.border{
+    border-color: #E8BB69;
+    border-radius: 15px;
+}
+
+.faq {
+
+    background-color: #855c18;
+    color:#f9d8a1
+}
+
+.faq p, .faq h3, .faq h2      {
+
+    color:#f9d8a1
+}
+
+.faq button{
+
+    background-color:#f9d8a1;
+    color:white;
+
+}
+
+.sub-menu :hover{
+
+background-color:#65430A;
+
+}
+
+div.text-center p{
+    text-align: center;
+}
