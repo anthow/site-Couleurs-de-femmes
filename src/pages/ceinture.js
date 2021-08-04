@@ -39,7 +39,7 @@ const TutoCeinture = () => (
                     Dolor sit amet consectetur adipiscing. Arcu non sodales neque sodales ut etiam sit amet nisl.
                     Est placerat in egestas erat. Nulla posuere sollicitudin aliquam ultrices.
                     Ac tincidunt vitae semper quis lectus nulla. Quis hendrerit dolor magna eget est lorem.
-                    Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus.
+                    Pellentesque elit ullamdcorper dignissim cras tincidunt lobortis feugiat vivamus.
                     Porta non pulvinar neque laoreet suspendisse interdum. Consectetur adipiscing elit ut aliquam purus sit.
                     Posuere sollicitudin aliquam ultrices sagittis orci a. Varius vel pharetra vel turpis. Tortor aliquam nulla facilisi cras.
                     Cursus euismod quis viverra nibh. Eu non diam phasellus vestibulum lorem. Aliquam nulla facilisi cras fermentum odio.
