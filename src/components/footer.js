@@ -25,7 +25,6 @@ export default function Footer() {
 return ( 
     <footer>
         
-        <Contactform />
         
         
                 <section className="py-20 w-10/12 flex flex-col  md:w-8/12 m-auto md:grid md:grid-cols-3 md:grid-rows-1 auto-cols-max auto-rows-max gap-y-12 md:gap-y-20 gap-x-28 content-center">
@@ -70,7 +69,7 @@ return (
     <h3 className="font-bold text-lg"> Email</h3>
     <p className="text-sm"> {data.datoCmsContact.adresseMail} </p>
     <div className="flex flex-row">
-<a target="_blank" href={data.datoCmsContact.facebook} > 
+<a target="_blank" rel="noreferrer" href={data.datoCmsContact.facebook} > 
     <figure className=" mr-2">          <StaticImage
           src="https://via.placeholder.com/40"
           width={30}  
@@ -87,7 +86,7 @@ return (
       </figure>
       </a>
 
-      <a target="_blank" href={data.datoCmsContact.instagram} > 
+      <a target="_blank" rel="noreferrer" href={data.datoCmsContact.instagram} > 
 
       <figure className=" "
       >          <StaticImage

@@ -30,7 +30,14 @@ header a, h1,h2,h3,h4,h5,h6{
     color:#f9d8a1
 }
 
-.faq button{
+button.faq {
+
+    background-color:#f9d8a1;
+    color:white;
+
+}
+
+ button.or{
 
     background-color:#f9d8a1;
     color:white;
@@ -46,3 +53,14 @@ background-color:#65430A;
 div.text-center p{
     text-align: center;
 }
+
+h1.titre{
+    border-image:url("../images/griffe1.jpg");
+    border-width: 0 0 20px 0;
+
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  

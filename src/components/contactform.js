@@ -11,6 +11,7 @@ const Contactform = () => (
             <input type="mail" className=" mb-5 border"></input>
             <label className="mb-5" htmlFor="message"> Message</label>
             <textarea cols="25" className="h-20 border"></textarea>
+            <button className="mt-10 px-5 rounded font-bold py-2 or w-min" type="submit">envoyer</button>
         </form>
         </section>
         </>

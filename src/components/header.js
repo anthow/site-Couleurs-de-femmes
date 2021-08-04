@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Logo from "./logo"
 
  const Header = ({ siteTitle }) => (
-  <header className=" mt-2  w-12/12 ">
+  <header className="   w-12/12 ">
     <div className=" flex flex-col items-center w-12/12">
       <Link
         to="/">

@@ -10,6 +10,7 @@ export default function Logo() {
       datoCmsLogo {
         logo {
           gatsbyImageData(width: 3000
+            height:1000
             )
         }
       }

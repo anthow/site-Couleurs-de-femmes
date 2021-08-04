@@ -114,7 +114,19 @@ const IndexPage = ({ data }) =>(
 </div>
         </article>
       </div>
-      <iframe width="660" height="415" src="https://www.youtube.com/embed/TFjhUkNGTH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
+      <figure className="mr-10"
+      >          <StaticImage
+          src="../images/youtube.jpg"
+          width={1250}
+          height={800}
+          quality={95}
+          formats={["AUTO", "WEBP", "AVIF"]}
+          alt="A Gatsby astronaut"
+          className=""
+
+
+
+        />  </figure> </section>
     <section className=" mt-20 w-12/12 m-auto">
       <figure className="place-self-center rounded "
       >          <StaticImage
