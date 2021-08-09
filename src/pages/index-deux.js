@@ -114,6 +114,8 @@ const IndexPage = ({ data }) =>(
 </div>
         </article>
       </div>
+      <div>
+<a href="https://www.youtube.com/watch?v=TFjhUkNGTH8" target="_blank">
       <figure className="mr-10"
       >          <StaticImage
           src="../images/youtube.jpg"
@@ -126,7 +128,12 @@ const IndexPage = ({ data }) =>(
 
 
 
-        />  </figure> </section>
+        />  </figure> </a> 
+        
+        <article>
+          <p> pour visionner la vidéo cliquez sur la photo</p>
+        </article>
+        </div>  </section>
     <section className=" mt-20 w-12/12 m-auto">
       <figure className="place-self-center rounded "
       >          <StaticImage
