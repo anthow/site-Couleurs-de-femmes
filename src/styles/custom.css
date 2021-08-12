@@ -64,3 +64,14 @@ h1.titre{
     display: block;
   }
   
+
+  .fonta{
+      color:#f9d8a1;
+  }
+
+
+  @media screen and (max-width: 640px) {
+    p, label {
+      text-align: left;
+    }
+  }

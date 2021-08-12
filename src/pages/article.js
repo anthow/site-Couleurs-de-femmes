@@ -9,8 +9,10 @@ const Boutique = () => (
   <Layout>
           <Seo title="Boutique" />
 
-        <section className="w-8/12 m-auto mb-20 flex flex-col  justify-center  ">
-<div className="flex flex-col md:flex-row    space-x-40 ">
+        <section className=" w-10/12 md:w-8/12 m-auto mb-20 flex flex-col  justify-center  ">
+<div className="flex flex-col md:flex-row    md:space-x-40 ">
+
+
     <div className="md:grid md:grid-cols-4 place-items-stretch space-y-5 " >
         <div className="col-span-4">
         <figure className="">
@@ -25,7 +27,7 @@ const Boutique = () => (
         />
       </figure>        
       </div>
-      <figure className="">
+      <figure className="hidden md:block">
         <StaticImage
           src="https://via.placeholder.com/400"
           width={100}
@@ -33,10 +35,10 @@ const Boutique = () => (
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="non"
-          className="rounded-lg mb-2"
+          className="rounded-lg mb-2 "
         />
       </figure>        
-      <figure className="">
+      <figure className="hidden md:block">
         <StaticImage
           src="https://via.placeholder.com/400"
           width={100}
@@ -46,7 +48,7 @@ const Boutique = () => (
           alt="non"
           className="rounded-lg mb-2"
         />
-      </figure>        <figure className="">
+      </figure>        <figure className="hidden md:block">
         <StaticImage
           src="https://via.placeholder.com/400"
           width={100}
@@ -56,7 +58,7 @@ const Boutique = () => (
           alt="non"
           className="rounded-lg mb-2"
         />
-      </figure>        <figure className="">
+      </figure>        <figure className="hidden md:block">
         <StaticImage
           src="https://via.placeholder.com/400"
           width={100}
@@ -69,9 +71,9 @@ const Boutique = () => (
       </figure>        
       </div>
       <article>
-      <h1 className="text-4xl mb-4">Ceinture FLeurie</h1>
+      <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">Ceinture FLeurie</h1>
       <p className="mb-10">123 €</p>
-<div className="md:flex md:flex-row mb-4 space-x-2 content-center">
+<div className="flex flex-row mb-4 space-x-2 content-center ">
     <p> Tissus uni </p>
     <select className="px-2 border rounded">
     <option value="blanc">blanc</option>
@@ -80,19 +82,19 @@ const Boutique = () => (
 
     </select>
      </div>
-     <div className="md:flex md:flex-row space-x-2 mb-10">
+     <div className="flex flex-row space-x-2 mb-10">
     <p> Quantité </p>
     <input type="number" className="border rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
-     <div className="md:flex md:flex-row space-x-2">
-        <button className="or p-2 rounded text-bold"> ajouter au panier</button>
-        <button className="or p-2 rounded text-bold"> me contacter</button>
+     <div className="flex flex-row space-x-2">
+        <button className="or text-sm md:text-lg p-2 rounded text-bold"> ajouter au panier</button>
+        <button className="or p-2 text-sm md:text-lg rounded text-bold"> me contacter</button>
 </div>
       </article>
     </div>
 
 </section>
-<section className="w-8/12 border p-12 m-auto ">
+<section className=" w-10/12 md:w-8/12 border p-4 md:p-12 m-auto ">
     <h2 className="mb-5 text-3xl"> Description </h2>
     <p>
     Duis at consectetur lorem donec massa sapien faucibus et. Sed libero enim sed faucibus turpis. 

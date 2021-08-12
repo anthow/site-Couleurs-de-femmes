@@ -8,13 +8,15 @@ import Horraire from "../components/horraire"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Contactform from "../components/contactform"
+
+
 const IndexPage = ({ data }) =>(
   <Layout>
     <Seo title="Home" />
     <section className="w-12/12">
       <h1 className=" w-10/12 md:w-8/12 m-auto italic text-center text-3xl mt-10 mb-20 " dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.titrePage }} >
         </h1>
-    </section>
+           </section>
   
   
     <section className=" w-10/12 md:w-8/12 m-auto  gap-y-20 gap-x-20 flex flex-col md:grid md:grid-rows-4 md:grid-cols-2 mb-20 ">
