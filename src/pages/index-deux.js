@@ -8,6 +8,10 @@ import Horraire from "../components/horraire"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Contactform from "../components/contactform"
+import { GatsbyImage } from "gatsby-plugin-image"
+
+
+
 const IndexPage = ({ data }) =>(
   <Layout>
     <Seo title="Home" />
@@ -19,14 +23,8 @@ const IndexPage = ({ data }) =>(
   
     <section className=" w-10/12 md:w-8/12 m-auto  gap-y-20 gap-x-20 flex flex-col md:grid md:grid-rows-4 md:grid-cols-2 mb-20 ">
       <figure className=" md:order-1">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={2000}
-          height={2000}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-        />
+      <GatsbyImage image={data.datoCmsPageDAccueil.imageDeuxAccouchements.gatsbyImageData} />
+
       </figure>
       <article className="text-sm md:order-2">  
 
@@ -37,14 +35,8 @@ const IndexPage = ({ data }) =>(
       </article>
 
       <figure className="md:order-4 ">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={2000}
-          height={2000}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-        />
+      <GatsbyImage image={data.datoCmsPageDAccueil.deuxiemeImageAccueil.gatsbyImageData} />
+
       </figure>
       <article className="text-sm md:order-3">
 
@@ -57,14 +49,8 @@ const IndexPage = ({ data }) =>(
       </article>
 
       <figure className="md:order-5 ">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={2000}
-          height={2000}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-        />
+      <GatsbyImage image={data.datoCmsPageDAccueil.imagePartenaireDeConfiance.gatsbyImageData} />
+
       </figure>
       <article className="text-sm md:order-6">
 
@@ -74,14 +60,8 @@ const IndexPage = ({ data }) =>(
       </article>
 
       <figure className=" md:order-8 ">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={2000}
-          height={2000}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-        />
+      <GatsbyImage image={data.datoCmsPageDAccueil.imageDeuxPartenaireDeConfiance.gatsbyImageData} />
+
       </figure>
       <article className="text-sm md:order-7">
 
@@ -135,19 +115,10 @@ const IndexPage = ({ data }) =>(
         </article>
         </div>  </section>
     <section className=" mt-20 w-12/12 m-auto">
-      <figure className="place-self-center rounded "
-      >          <StaticImage
-          src="https://via.placeholder.com/400"
-          width={3000}
-          height={1000}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="A Gatsby astronaut"
-          className=""
+      <figure className="place-self-center  "
+      >    <GatsbyImage image={data.datoCmsPageDAccueil.imageCeinture.gatsbyImageData} />
 
 
-
-        />
       </figure>
     </section>
     <section className=" mt-20 w-8/12 m-auto ">
@@ -196,7 +167,23 @@ export const query = graphql`
     texteConstat
     titreToutesLesFemmes
     texteToutesLesFemmes
-    
+    imageDeuxAccouchements {
+      gatsbyImageData
+    }
+    deuxiemeImageAccueil {
+      gatsbyImageData
+    }
+    imagePartenaireDeConfiance {
+      gatsbyImageData
+    }
+    imageDeuxPartenaireDeConfiance {
+      gatsbyImageData
+    }
+    imageCeinture {
+      gatsbyImageData(width: 3000
+        height:1000
+        )
+    }
   }
 }
 `

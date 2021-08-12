@@ -1,6 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import {  useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function Logo() {
   const data = useStaticQuery(graphql`
@@ -9,6 +10,9 @@ export default function Logo() {
         
         titreQuiSuisJe
         texteQuiSuisJe
+        imageFanny {
+          gatsbyImageData
+        }
         }
       }
     
@@ -21,18 +25,10 @@ return (
       <article>
         <h3 className="font-bold text-lg"> Fanny</h3>
         <figure className="place-self-center "
-        >          <StaticImage
-            src="https://via.placeholder.com/400"
-            width={400}
-            height={400}
-            quality={95}
-            formats={["AUTO", "WEBP", "AVIF"]}
-            alt="A Gatsby astronaut"
-            className="rounded-full"
+        >        
 
 
-
-          />
+      <GatsbyImage image={data.datoCmsPageDAccueil.imageFanny.gatsbyImageData} className="rounded-full" />
         </figure>
       </article>
       <article>
