@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Contactform from "../components/contactform"
 import HeaderProvi from "../components/header-provi"
 import LogoContact from "../components/logo_contact"
-import Horraire from "../components/horraire"
+import Horaire from "../components/horaire"
 const Contact = () => (
 
     <Layout>
@@ -22,7 +22,7 @@ const Contact = () => (
 </header>
      
     </section>
-    <Horraire />
+    <Horaire />
 <Contactform />
 
     </Layout>

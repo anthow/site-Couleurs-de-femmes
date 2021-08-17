@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import Avis from "../components/avis"
 import Faq from "../components/faq"
 import Creatrice from "../components/creatrice"
-import Horraire from "../components/horraire"
+import Horaire from "../components/horaire"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Contactform from "../components/contactform"
@@ -142,7 +142,7 @@ const IndexPage = ({ data }) =>(
     <Avis />
     <Faq />
     <Creatrice />
-    <Horraire />
+    <Horaire />
     <Contactform />
   </Layout>
 )
