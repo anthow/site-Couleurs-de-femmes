@@ -27,7 +27,7 @@ export default function Avis() {
       <h2 className="mb-10 mt-20 font-bold text-xl text-center">C'est vous qui en parlez le mieux</h2>
 
       <section className=" w-10/12 md:w-8/12 m-auto  grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 auto-cols-max auto-rows-max gap-y-20 gap-x-28 content-center">
-        <article className="border p-10">
+        <article className="border h-auto pt-10 px-10">
           <h3 className="text-center mb-10 font-bold text-lg">
             {data.datoCmsAvi.auteurAvisUn}    </h3>
           <p className="text-center text-sm">

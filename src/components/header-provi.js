@@ -4,21 +4,13 @@ import { Link } from "gatsby"
 import Logo from "./logo"
 
  const HeaderProvi = ({ siteTitle }) => (
-  <header className=" w-12/12 mb-32 ">
-    <div className=" flex flex-col items-center w-12/12">
-      <Link
-        to="/">
-        <figure>
-         <Logo />
-        </figure>
-      </Link>
-    </div>
+    
     <div className=" w-12/12 my-2 ">
       <ul className="flex justify-center space-x-5">
 
         <li>
-          <Link to="/index-deux">
-            sans video
+          <Link to="/">
+            Accueil
           </Link>
         </li>
          
@@ -53,7 +45,6 @@ import Logo from "./logo"
       </ul>
 
     </div>
-  </header>
 )
 
 HeaderProvi.propTypes = {

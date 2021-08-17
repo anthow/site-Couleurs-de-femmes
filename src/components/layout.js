@@ -10,7 +10,6 @@
  import { useStaticQuery, graphql } from "gatsby"
  
  //import Header from "./header"
- import HeaderProvi from "./header-provi"
  import Footer from "./footer"
  
  const Layout = ({ children }) => {
@@ -26,7 +25,6 @@
  
    return (
      <>
-       <HeaderProvi  siteTitle={data.site.siteMetadata?.title || `Title`} />
          <main>{children}</main>
          <Footer />
      </>

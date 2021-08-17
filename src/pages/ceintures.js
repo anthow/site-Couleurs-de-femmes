@@ -3,12 +3,23 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import LogoBoutique from "../components/logo_boutique" 
+import HeaderProvi from "../components/header-provi"
 
 const ListeCeinture = () => (
 
   <Layout>
     <Seo title="Boutique" />
+    <section className="w-12/12">
+    <header className=" w-12/12 mb-32 ">
 
+    <figure>
+         <LogoBoutique />
+        </figure>
+        <HeaderProvi />
+</header>
+     
+    </section>
     <section className="w-10/12 m-auto flex flex-col justify-center ">
       <div className=" w-9/12 m-auto flex flex-col md:flex-row  mt-20 mb-32">
         <figure className="w-1/3">

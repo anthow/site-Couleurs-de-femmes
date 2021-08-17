@@ -3,12 +3,23 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import LogoTutoriel from "../components/logo_tutoriel"
+import HeaderProvi from "../components/header-provi"
 
 const TutoCeinture = () => (
 
     <Layout>
         <Seo title="la ceinture" />
+        <section className="w-12/12">
+    <header className=" w-12/12 mb-32 ">
 
+    <figure>
+         <LogoTutoriel />
+        </figure>
+        <HeaderProvi />
+</header>
+     
+    </section>
         <section className="w-8/12  m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-2  ">
             <figure className="">
                 <StaticImage

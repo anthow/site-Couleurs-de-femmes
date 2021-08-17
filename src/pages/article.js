@@ -3,12 +3,22 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-const Boutique = () => (
+import LogoBoutique from "../components/logo_boutique" 
+import HeaderProvi from "../components/header-provi"
+const article = () => (
     
   <Layout>
           <Seo title="Boutique" />
+          <section className="w-12/12">
+    <header className=" w-12/12 mb-32 ">
 
+    <figure>
+         <LogoBoutique />
+        </figure>
+        <HeaderProvi />
+</header>
+     
+    </section>
         <section className=" w-10/12 md:w-8/12 m-auto mb-20 flex flex-col  justify-center  ">
 <div className="flex flex-col md:flex-row    md:space-x-40 ">
 
@@ -108,4 +118,4 @@ const Boutique = () => (
   </Layout>
 )
 
-export default Boutique
+export default article

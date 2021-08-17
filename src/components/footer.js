@@ -107,20 +107,6 @@ return (
 </article>
         </section>
         <section className="w-8/12 m-auto">
-        <figure className="mb-10 "
-      >          <StaticImage
-          src="https://via.placeholder.com/730x195"
-          width={365}
-          height={97}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="A Gatsby astronaut"
-          
-
-
-
-        />
-      </figure>
       <article className="md:flex m-auto justify-center space-x-4 w-10/12">
         <p><a href="#"> condition générale de vente</a></p>
         <p><a href="#"> politique de confidentialité</a></p>

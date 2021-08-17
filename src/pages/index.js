@@ -9,20 +9,29 @@ import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import Contactform from "../components/contactform"
 import { GatsbyImage } from "gatsby-plugin-image"
-
+import HeaderProvi from "../components/header-provi"
+import Logo from "../components/logo"
 
 const IndexPage = ({ data }) =>(
   <Layout>
     <Seo title="Home" />
     <section className="w-12/12">
+    <header className=" w-12/12 mb-32 ">
+
+    <figure>
+         <Logo />
+        </figure>
+        <HeaderProvi />
+</header>
       <h1 className=" w-10/12 md:w-8/12 m-auto italic text-center text-3xl mt-10 mb-20 " dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.titrePage }} >
         </h1>
-           </section>
+    </section>
   
   
-    <section className=" w-10/12 md:w-8/12 m-auto  gap-y-20 gap-x-20 flex flex-col md:grid md:grid-rows-4 md:grid-cols-2 mb-20 ">
+    <section className=" w-10/12 md:w-8/12 m-auto  auto-cols-min  gap-y-20 gap-x-20 flex flex-col md:grid md:grid-rows-4 md:grid-cols-2 ">
       <figure className=" md:order-1">
-      <GatsbyImage image={data.datoCmsPageDAccueil.imageDeuxAccouchements.gatsbyImageData} />
+      <GatsbyImage className=" md:order-1" image={data.datoCmsPageDAccueil.imageDeuxAccouchements.gatsbyImageData} />
+
       </figure>
       <article className="text-sm md:order-2">  
 
@@ -34,6 +43,7 @@ const IndexPage = ({ data }) =>(
 
       <figure className="md:order-4 ">
       <GatsbyImage image={data.datoCmsPageDAccueil.deuxiemeImageAccueil.gatsbyImageData} />
+
       </figure>
       <article className="text-sm md:order-3">
 
@@ -48,8 +58,6 @@ const IndexPage = ({ data }) =>(
       <figure className="md:order-5 ">
       <GatsbyImage image={data.datoCmsPageDAccueil.imagePartenaireDeConfiance.gatsbyImageData} />
 
-
-
       </figure>
       <article className="text-sm md:order-6">
 
@@ -60,8 +68,6 @@ const IndexPage = ({ data }) =>(
 
       <figure className=" md:order-8 ">
       <GatsbyImage image={data.datoCmsPageDAccueil.imageDeuxPartenaireDeConfiance.gatsbyImageData} />
-
-
 
       </figure>
       <article className="text-sm md:order-7">
@@ -95,13 +101,30 @@ const IndexPage = ({ data }) =>(
 </div>
         </article>
       </div>
-      <iframe width="660" height="415" src="https://www.youtube.com/embed/TFjhUkNGTH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </section>
+      <div>
+<a href="https://www.youtube.com/watch?v=TFjhUkNGTH8" target="_blank">
+      <figure className="mr-10"
+      >          <StaticImage
+          src="../images/youtube.jpg"
+          width={1250}
+          height={800}
+          quality={95}
+          formats={["AUTO", "WEBP", "AVIF"]}
+          alt="A Gatsby astronaut"
+          className=""
+
+
+
+        />  </figure> </a> 
+        
+        <article>
+          <p> pour visionner la vidéo cliquez sur la photo</p>
+        </article>
+        </div>  </section>
     <section className=" mt-20 w-12/12 m-auto">
+      <figure className="place-self-center  "
+      >    <GatsbyImage image={data.datoCmsPageDAccueil.imageCeinture.gatsbyImageData} />
 
-      <figure className="place-self-center "
-      > 
-
-<GatsbyImage image={data.datoCmsPageDAccueil.imageCeinture.gatsbyImageData} />
 
       </figure>
     </section>
@@ -152,16 +175,20 @@ export const query = graphql`
     titreToutesLesFemmes
     texteToutesLesFemmes
     imageDeuxAccouchements {
-      gatsbyImageData
+      gatsbyImageData (width:600
+        height:900)
     }
     deuxiemeImageAccueil {
-      gatsbyImageData
+      gatsbyImageData(width:600
+        height:900)
     }
     imagePartenaireDeConfiance {
-      gatsbyImageData
+      gatsbyImageData(width:600
+        height:900)
     }
     imageDeuxPartenaireDeConfiance {
-      gatsbyImageData
+      gatsbyImageData(width:600
+        height:900)
     }
     imageCeinture {
       gatsbyImageData(width: 3000
