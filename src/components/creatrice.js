@@ -11,7 +11,9 @@ export default function Logo() {
         titreQuiSuisJe
         texteQuiSuisJe
         imageFanny {
-          gatsbyImageData
+          gatsbyImageData( width:600
+            height:600
+            )
         }
         }
       }
@@ -21,7 +23,7 @@ export default function Logo() {
 return ( 
 <>
 <h2 className="mb-10 mt-20 font-bold text-xl text-center">Qui suis-je ?</h2>
-    <section className="py-20 w-10/12 m-auto grid grid-cols-1 grod-rows-2  md:grid-cols-2 md:grid-rows-1 auto-cols-max auto-rows-max gap-y-20 gap-x-28 content-center">
+    <section className="md:py-20 w-10/12 m-auto grid grid-cols-1 grod-rows-2  md:grid-cols-2 md:grid-rows-1 auto-cols-max auto-rows-max gap-y-10 md:gap-y-20 gap-x-28 content-center mb-20 md:mb-0">
       <article>
         <h3 className="font-bold text-lg"> Fanny</h3>
         <figure className="place-self-center "

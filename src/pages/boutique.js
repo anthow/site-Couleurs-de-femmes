@@ -5,8 +5,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LogoBoutique from "../components/logo_boutique" 
 import HeaderProvi from "../components/header-provi"
+import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const Boutique = () => (
+
+const Boutique = ({ data })  => (
     
   <Layout>
           <Seo title="Boutique" />
@@ -23,203 +26,52 @@ const Boutique = () => (
 <h1 className=" titre text-4xl mb-20"> Boutique</h1>
 
 <div className="flex flex-col md:grid md:grid-cols-4 m-auto md:gap-y-10 md:gap-x-16 ">
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
+    {   
+    data.allDatoCmsBoutique.edges.map(({ node }) => (
+<>
+<article>
+
+      <Link to={node.url} > 
+      <figure className="">
+
+      <GatsbyImage image={node.imagesProduits[0].gatsbyImageData}           className="rounded-lg mb-2"
+ />
+</figure>
+<h2 className="text-lg text-center mb-1">{node.nomDuProduit}</h2>
+<p className="text-sm text-center text-gray-600">{node.prix} euros</p>
 
 
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
-    <article>
-      <Link to="/article">
-    <figure className="">
-        <StaticImage
-          src="https://via.placeholder.com/400"
-          width={250}
-          height={250}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="non"
-          className="rounded-lg mb-2"
-        />
-      </figure>
-      <h2 className="text-lg text-center mb-1">Ceinture Brianna</h2>
-      <p className="text-sm text-center text-gray-600"> 30 €</p>
-      </Link>
-    </article>
+</Link>
+</article>
 
-    
-
-   
+</>
+    ))}
    
 </div>
 </section>
   </Layout>
 )
+
+export const query = graphql`
+  {
+    allDatoCmsBoutique {
+      edges {
+        node {
+          couleursTissuUni
+          description
+          id
+          nomDuProduit
+          prix
+          originalId
+          typeDeProduit
+          url
+          imagesProduits {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Boutique

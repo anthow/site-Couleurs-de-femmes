@@ -106,10 +106,10 @@ return (
 </div>
 </article>
         </section>
-        <section className="w-8/12 m-auto">
-      <article className="md:flex m-auto justify-center space-x-4 w-10/12">
-        <p><a href="#"> condition générale de vente</a></p>
-        <p><a href="#"> politique de confidentialité</a></p>
+        <section className="w-10/12 md:w-8/12 m-auto">
+      <article className="md:flex m-auto  justify-center space-x-4 w-10/12">
+        <p className="text-center"><a href="#"> condition générale de vente</a></p>
+        <p className="text-center"><a href="#"> politique de confidentialité</a></p>
 
       </article>
       <p className=" text-sm text-center">Copyright</p>

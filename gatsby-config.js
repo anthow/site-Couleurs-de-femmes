@@ -8,7 +8,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
-    `gatsby-transformer-remark`,        
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-styled-components`,        
 
     {
       resolve: `gatsby-plugin-google-fonts`,

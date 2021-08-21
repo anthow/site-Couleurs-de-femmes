@@ -24,36 +24,39 @@ export default function Avis() {
 
   return (
     <>
-      <h2 className="mb-10 mt-20 font-bold text-xl text-center">C'est vous qui en parlez le mieux</h2>
+      <h2 className="mb-10 md:mb-16 mt-20 font-bold text-xl text-center">C'est vous qui en parlez le mieux</h2>
 
-      <section className=" w-10/12 md:w-8/12 m-auto  grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 auto-cols-max auto-rows-max gap-y-20 gap-x-28 content-center">
-        <article className="border h-auto pt-10 px-10">
+      <section className=" w-10/12 md:w-8/12 m-auto  grid grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-1 auto-cols-max  gap-x-28 content-center md:mb-10">
+        <article className="border mb-10 md:mb-0 h-auto pt-10 px-2 pb-10 md:px-10">
           <h3 className="text-center mb-10 font-bold text-lg">
             {data.datoCmsAvi.auteurAvisUn}    </h3>
-          <p className="text-center text-sm">
+          <p className="text-center text-sm italic">
           {data.datoCmsAvi.texteAvisUn}
             
-            </p>
+            </p>  
         </article>
-        <article className="border p-10">
+        <article className="border mb-10 md:mb-0 h-auto pt-10 px-2 pb-10 md:px-10">
           <h3 className="text-center mb-10 font-bold text-lg">
           {data.datoCmsAvi.auteurAvisDeux}
           </h3>
-          <p className="text-center text-sm">
+          <p className="text-center text-sm italic">
           {data.datoCmsAvi.texteAvisDeux}
 </p>
         </article>
-        <article className="border p-10">
+        </section>
+        <section className=" w-10/12 md:w-8/12 m-auto  grid grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-1 auto-cols-max  gap-x-28 content-center mb-10">
+
+        <article className="border mb-10 md:mb-0 h-auto pt-10 px-2 pb-10 md:px-10">
           <h3 className="text-center mb-10 font-bold text-lg">
           {data.datoCmsAvi.auteurAvisTrois}          </h3>
-          <p className="text-center text-sm">
+          <p className="text-center text-sm italic">
           {data.datoCmsAvi.texteAvisTrois}
 </p>
         </article>
-        <article className="border p-10">
+        <article className="border mb-10 md:mb-0 h-auto pt-10 px-2 pb-10 md:px-10">
           <h3 className="text-center mb-10 font-bold text-lg">
           {data.datoCmsAvi.auteurAvisQuatre}          </h3>
-          <p className="text-center text-sm">
+          <p className="text-center text-sm italic">
           {data.datoCmsAvi.texteAvisQuatre }
 </p>
         </article>
