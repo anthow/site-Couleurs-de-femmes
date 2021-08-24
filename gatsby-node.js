@@ -23,7 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog post pages.
+    // Create article  pages.
     result.data.allDatoCmsBoutique.edges.forEach(({ node }) => {
       createPage({
         // Path for this page — required

@@ -7,9 +7,9 @@ import LogoBoutique from "../components/logo_boutique"
 import HeaderProvi from "../components/header-provi"
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image"
-export default function ProductPage({ data: { product } }) {
-  return (
-    <React.Fragment>
+
+const ProductPage = ({ data })  => (
+
 
 
       <Layout>
@@ -30,27 +30,30 @@ export default function ProductPage({ data: { product } }) {
 
     <div className="md:grid md:grid-cols-4 place-items-stretch space-y-5 w-5/12 " >
         <div className="col-span-4">
+
         <figure className="">
+        <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2 "/>
+
       </figure>        
       </div>
       <figure className="hidden md:block">
-      <GatsbyImage image={product.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2"/>
+      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
 
       </figure>        
       <figure className="hidden md:block">
-      <GatsbyImage image={product.imagesProduits[1].gatsbyImageData}   className="rounded-lg mb-2"/>
+      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mr-2 mb-2"/>
 
       </figure>        <figure className="hidden md:block">
-      <GatsbyImage image={product.imagesProduits[2].gatsbyImageData}   className="rounded-lg mb-2"/>
+      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg  mr-2 mb-2"/>
 
       </figure>        <figure className="hidden md:block">
-             <GatsbyImage image={product.imagesProduits[3].gatsbyImageData}   className="rounded-lg mb-2"/>
+             <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2"/>
 
       </figure>        
       </div>
       <article>
-      <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">{product.nomDuProduit}</h1>
-      <p className="mb-10">{product.prix}</p>
+      <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
+      <p className="mb-10">{data.datoCmsBoutique.prix} euros</p> 
 <div className="flex flex-row mb-4 space-x-2 content-center ">
     <p> Tissus uni </p>
 
@@ -79,20 +82,16 @@ export default function ProductPage({ data: { product } }) {
 </section>
 <section className=" w-10/12 md:w-8/12 border p-4 md:p-12 m-auto ">
     <h2 className="mb-5 text-3xl"> Description </h2>
-    <div className="text-sm mb-5" dangerouslySetInnerHTML={{ __html: product.description }} />
+    <div className="text-sm mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsBoutique.description }} />
 
 </section>
   </Layout>
-
-
-    </React.Fragment>
-  );
-}
+  
+)
 
 export const query = graphql`
 query ProductPageQuery($url: String){
-  
-   product: datoCmsBoutique(url: {eq: $url}) {
+   datoCmsBoutique(url: {eq: $url}) {
       couleursTissuUni
       description
       imagesProduits {
@@ -107,5 +106,6 @@ query ProductPageQuery($url: String){
     }
   }
 `;
+export default ProductPage
 
 
