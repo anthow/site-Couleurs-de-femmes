@@ -46,7 +46,7 @@ const ListeCeinture = ({ data })  => (
 <>
 <article>
 
-      <Link to={node.url} > 
+      <Link to={"../boutique/" + node.url} > 
       <figure className="">
 
       <GatsbyImage image={node.imagesProduits[0].gatsbyImageData}           className="rounded-lg mb-2"
