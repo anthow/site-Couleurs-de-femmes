@@ -54,6 +54,7 @@ const Boutique = ({ data })  => (
 
 export const query = graphql`
   {
+    
     allDatoCmsBoutique {
       edges {
         node {

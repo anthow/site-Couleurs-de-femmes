@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Logo from "./logo"
 import Navbar from "./navbar/navbar"
+import { Helmet } from "react-helmet"
  const HeaderProvi = ({ siteTitle }) => (
+  <>
     <Navbar />
-   
+  </> 
 )
 
 HeaderProvi.propTypes = {

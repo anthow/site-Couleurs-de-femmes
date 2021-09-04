@@ -1,12 +1,16 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./navarbarlinks"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+
 
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
   background-color: #fff;
-  position: relative;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 5vw;
@@ -76,7 +80,7 @@ const Hamburger = styled.div`
 
   ::before {
     transform: ${props =>
-        props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+    props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
@@ -87,37 +91,40 @@ const Hamburger = styled.div`
   }
 `
 const Navbar = () => {
-    const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
-    return (
-        <Navigation classname="align-center">
-            <div classname=" ">
-            <h2>nom du site </h2> 
-            </div>     
-            <Toggle
-                navbarOpen={navbarOpen}
-                onClick={() => setNavbarOpen(!navbarOpen)}
-            >
-                {navbarOpen ? <Hamburger open /> : <Hamburger />}
-            </Toggle>
-            {navbarOpen ? (
-                <Navbox>
-                    <article className="mb-4">
-                    <h3>panier</h3>
-                    </article>
-                    <NavbarLinks />
-                    
-                </Navbox>
-            ) : (
-                <Navbox open>
-                    <NavbarLinks />
-                </Navbox>
-            )}
-               <article className="hidden md:block">
-                    <h3>panier</h3>
-                    </article>
-        </Navigation>
-    )
+  return (
+    <Navigation classname="align-center">
+      <div classname=" ">
+        <h2>nom du site </h2>
+      </div>
+      <Toggle
+        navbarOpen={navbarOpen}
+        onClick={() => setNavbarOpen(!navbarOpen)}
+      >
+        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+      </Toggle>
+      {navbarOpen ? (
+        <Navbox>
+          <article className="mb-4">
+            <button className="snipcart-checkout">panier</button>
+          </article>
+          <NavbarLinks />
+
+        </Navbox>
+      ) : (
+        <Navbox open>
+          <NavbarLinks />
+        </Navbox>
+      )}
+      <article className="hidden md:block">
+        <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingCart} size="1x" className="fonta mr-2" />
+          <span className="snipcart-total-price"></span>
+
+        </button>
+      </article>
+    </Navigation>
+  )
 }
 
 export default Navbar

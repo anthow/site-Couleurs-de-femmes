@@ -37,43 +37,35 @@ const ProductPage = ({ data })  => (
       </figure>        
       </div>
       <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
+      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[1].gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
 
       </figure>        
       <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mr-2 mb-2"/>
+      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[2].gatsbyImageData}   className="rounded-lg mr-2 mb-2"/>
 
-      </figure>        <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg  mr-2 mb-2"/>
-
-      </figure>        <figure className="hidden md:block">
-             <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2"/>
-
-      </figure>        
+    </figure>       
       </div>
       <article>
       <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
       <p className="mb-10">{data.datoCmsBoutique.prix} euros</p> 
 <div className="flex flex-row mb-4 space-x-2 content-center ">
-    <p> Tissus uni </p>
 
 
-
-
-    
-    <select className="px-2 border rounded">
-    <option value="blanc">blanc</option>
-    <option value="blanc">rouge</option>
-    <option value="blanc">noir</option>
-
-    </select>
      </div>
      <div className="flex flex-row space-x-2 mb-10">
     <p> Quantité </p>
     <input type="number" className="border rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
      <div className="flex flex-row space-x-2">
-        <button className="or text-sm md:text-lg p-2 rounded text-bold"> ajouter au panier</button>
+        <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
+            data-item-id={data.datoCmsBoutique.id}
+            data-item-price={data.datoCmsBoutique.prix}
+            data-item-url="/"
+            data-item-name={data.datoCmsBoutique.nomDuProduit}
+            data-item-custom1-name="Couleur tissus uni"
+    data-item-custom1-options="bleu|ecru"
+        
+        > ajouter au panier</button>
         <button className="or p-2 text-sm md:text-lg rounded text-bold"> me contacter</button>
 </div>
       </article>
