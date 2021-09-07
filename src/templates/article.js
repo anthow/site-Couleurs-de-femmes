@@ -36,14 +36,13 @@ const ProductPage = ({ data })  => (
 
       </figure>        
       </div>
-      <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[1].gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
+      {data.datoCmsBoutique.imagesProduits.map(images => {
+        return(      <figure className="hidden md:block">
+        <GatsbyImage image={images.gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
+  
+        </figure>  )
+      })}
 
-      </figure>        
-      <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[2].gatsbyImageData}   className="rounded-lg mr-2 mb-2"/>
-
-    </figure>       
       </div>
       <article>
       <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
