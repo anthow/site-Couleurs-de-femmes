@@ -24,10 +24,9 @@ const ListeCeinture = ({ data })  => (
     </section>
     <section className="w-10/12 m-auto  flex flex-col justify-center ">
       <div className=" w-9/12 m-auto space-x-4 flex flex-col md:flex-row mb-16">
-        <figure className="w-1/3">
         <GatsbyImage image={data.datoCmsDescriptionCeinturePageProduit.imageCeinture.gatsbyImageData}           className="rounded-lg mb-2"
 
-          />        </figure>
+          />       
 
         <article className=" w-2/3">
           <h1 className="mb-5 text-4xl"> la ceinture</h1>

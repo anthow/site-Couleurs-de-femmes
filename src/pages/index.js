@@ -33,10 +33,8 @@ const IndexPage = ({ data }) =>(
     </section>
   
     <section className=" w-10/12 md:w-8/12 m-auto  auto-cols-min  md:gap-y-20 md:gap-x-20 flex flex-col md:grid md:grid-rows-4 md:grid-cols-2 ">
-      <figure className=" order-1">
       <GatsbyImage className=" order-1" image={data.datoCmsPageDAccueil.imageDeuxAccouchements.gatsbyImageData} />
 
-      </figure>
       <article className="text-sm order-2 mb-20">  
 
         <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreDeuxAccouchements} </h2>
@@ -45,10 +43,8 @@ const IndexPage = ({ data }) =>(
         </div>
       </article>
 
-      <figure className=" order-3 md:order-4 ">
-      <GatsbyImage image={data.datoCmsPageDAccueil.deuxiemeImageAccueil.gatsbyImageData} />
+      <GatsbyImage className=" order-3 md:order-4 " image={data.datoCmsPageDAccueil.deuxiemeImageAccueil.gatsbyImageData} />
 
-      </figure>
       <article className="text-sm order-4 mb-20 md:order-3">
 
       <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreTextileEco} </h2>
@@ -59,10 +55,8 @@ const IndexPage = ({ data }) =>(
 </div>
       </article>
 
-      <figure className="order-5 ">
-      <GatsbyImage image={data.datoCmsPageDAccueil.imagePartenaireDeConfiance.gatsbyImageData} />
+      <GatsbyImage className="order-5 " image={data.datoCmsPageDAccueil.imagePartenaireDeConfiance.gatsbyImageData} />
 
-      </figure>
       <article className=" mb-20 text-sm order-6">
 
       <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg ">{data.datoCmsPageDAccueil.titrePartenaireDeConfiance} </h2>
@@ -70,10 +64,8 @@ const IndexPage = ({ data }) =>(
 </div>
       </article>
 
-      <figure className=" order-7 md:order-8 ">
-      <GatsbyImage image={data.datoCmsPageDAccueil.imageDeuxPartenaireDeConfiance.gatsbyImageData} />
+      <GatsbyImage className=" order-7 md:order-8 " image={data.datoCmsPageDAccueil.imageDeuxPartenaireDeConfiance.gatsbyImageData} />
 
-      </figure>
       <article className=" order-8 mt-10 md:mt-0 text-sm md:order-7">
 
       <div dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteDeuxPartenaireDeConfiance }}>
@@ -88,43 +80,6 @@ const IndexPage = ({ data }) =>(
   
 
 
-
-    <section className=" w-10/12 m-auto md:w-12/12">
-    <h1 className=" w-10/12 md:w-6/12 m-auto italic text-center text-3xl mt-20 mb-10 " 
-    dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.titreCreation }} >
-      </h1>
-      <div className="mb-10 md:mb-20 text-center" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.accrocheCreation }}>
-</div>    </section>
-    <section className="  w-12/12 md:w-8/12 m-auto  flex flex-col md:grid md:grid-cols-2 md:grid-rows-1   md:auto-cols-max md:auto-rows-max md:gap-y-20 mb-20 ">
-      <div className="border  w-10/12  m-auto mb-10 md:mb-0 md:w-8/12 p-2 md:p-5">
-      <h2 className=" mt-5 md:mt-10 md:mt-0 text-center md:text-left  mb-5 md:mb-10 font-bold text-lg">{data.datoCmsPageDAccueil.titreLaCeinture} </h2>
-        <article className="text-sm">
-
-      
-        <div dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteLaCeinture }}>
-</div>
-        </article>
-      </div>
-      <div>
-<a href="https://www.youtube.com/watch?v=TFjhUkNGTH8" target="_blank">
-      <figure className="md:mr-10"
-      >          <StaticImage
-          src="../images/youtube.jpg"
-          width={1250}
-          height={800}
-          quality={95}
-          formats={["AUTO", "WEBP", "AVIF"]}
-          alt="A Gatsby astronaut"
-          className=""
-
-
-
-        />  </figure> </a> 
-        
-        <article className=" w-10/12 m-auto text-sm">
-          <p> pour visionner la vidéo cliquez sur la photo</p>
-        </article>
-        </div>  </section>
     <section className=" mt-10 md:mt-20 w-12/12 m-auto">
       <figure className="place-self-center  "
       >    <GatsbyImage image={data.datoCmsPageDAccueil.imageCeinture.gatsbyImageData} />
@@ -180,7 +135,7 @@ export const query = graphql`
     texteToutesLesFemmes
     imageDeuxAccouchements {
       gatsbyImageData (width:1200
-        height:1500)
+        height: 600)
     }
     deuxiemeImageAccueil {
       gatsbyImageData(width:1200

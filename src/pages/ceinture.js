@@ -23,7 +23,7 @@ const TutoCeinture = ({ data }) => (
             </header>
 
         </section>
-        <section className="w-8/12  m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-2  ">
+        <section className="w-8/12  gap-x-12 m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-2  ">
             <figure className="">
                 <GatsbyImage image={data.datoCmsTutoriel.imageVideoCeinture.gatsbyImageData} />
 
@@ -35,7 +35,7 @@ const TutoCeinture = ({ data }) => (
                 <div className="text-sm mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.texteIntroduction }}>
                 </div>
             </article>
-            <article className="col-span-2 text-sm mt-5" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.prSentationCeinture }}>
+            <article className="col-span-2 text-sm " dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.prSentationCeinture }}>
 
             </article>
         </section>
@@ -87,7 +87,10 @@ export const query = graphql`
       etape2
       etape3
       imageEtape1 {
-        gatsbyImageData
+        gatsbyImageData(
+            height:2400,
+            width: 3000,
+        )
       }
       imageEtape2 {
         gatsbyImageData
