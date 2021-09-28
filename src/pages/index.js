@@ -28,6 +28,10 @@ const IndexPage = ({ data }) =>(
          <Logo className="md:hidden" />
         </figure>
 </div>
+<StaticImage src="../images/header-accueil-couleursdefemmes.png" className="hidden md:block w-12/12" layout="fullWidth"  transformOptions="cropFocus" alt="Header image de la page d'acceuil du site couleurs de femmes" />  
+  <StaticImage src="../images/header-accueil-couleursdefemmes.png" className=" md:hidden" layout="fullWidth" aspectRatio={5/4} transformOptions="cropFocus" alt="Header image de la page d'acceuil du site couleurs de femmes" />  
+ 
+
       <h1 className=" w-10/12 md:w-8/12 m-auto italic text-center text-3xl md:text-5xl mt-10 mb-10 md:mb-24 " dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.titrePage }} >
         </h1>
     </section>

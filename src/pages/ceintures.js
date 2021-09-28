@@ -37,9 +37,7 @@ const ListeCeinture = ({ data })  => (
       </div>
       <article className="w-10/12 mb-20 m-auto">
         <div className="text-sm mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsDescriptionCeinturePageProduit.descriptionCeinture }} />
-        <button className="or font-bold text-sm p-2 rounded">
-            <Link to="#">En savoir plus sur la ceinture</Link>
-          </button>
+       
         </article>
       <h1 className=" w-10/12 m-auto titre text-4xl mb-5 md:mb-20"> Les ceintures</h1>
       <div className=" w-10/12 flex flex-col md:grid md:grid-cols-3 m-auto md:gap-y-10 md:gap-x-16 ">
