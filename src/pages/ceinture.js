@@ -24,7 +24,7 @@ const TutoCeinture = ({ data }) => (
 
         </section>
         <section className="md:w-8/12  gap-x-12 m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-1  ">
-        <h1 className="md:hidden w-10/12 m-auto text-center md:w-12/12 mb-5 text-4xl"> la ceinture</h1>
+        <h1 className="md:hidden w-10/12 m-auto text-center md:w-12/12 mb-5 text-4xl"> La ceinture</h1>
             <figure className="mb-10 md:-mb-0">
                 <GatsbyImage image={data.datoCmsTutoriel.imageVideoCeinture.gatsbyImageData} />
 

@@ -14,6 +14,7 @@ export default function Footer() {
       datoCmsContact {
         adresse
         adresseMail
+        bonneAdresse
         facebook
         instagram
         pays
@@ -40,6 +41,7 @@ return (
 <div className="flex flex-col">
     <h3 className="font-bold text-lg"> Adresse</h3>
     <p className="text-sm text-left adresse">{data.datoCmsContact.adresse} <br></br>
+    {data.datoCmsContact.bonneAdresse}<br></br>
     {data.datoCmsContact.ville}</p>
 </div>
 </article>
