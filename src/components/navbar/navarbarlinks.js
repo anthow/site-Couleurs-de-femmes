@@ -38,10 +38,16 @@ const NavbarLinks = () => {
           </Link>
         </li>
         <li>
+          <Link to="/collaboration">
+            Collaboration
+          </Link>
+        </li>
+        <li>
           <Link to="/contact">
             Contact
           </Link>
-        </li>
+          </li>
+     
       </ul>
 
     </div>

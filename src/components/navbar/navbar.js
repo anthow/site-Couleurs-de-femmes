@@ -96,7 +96,7 @@ const Navbar = () => {
   return (
     <Navigation classname="align-center">
       <div classname=" ">
-        <h2>nom du site </h2>
+        <h2 className="text-xl"> Couleurs de femmes </h2>
       </div>
       <Toggle
         navbarOpen={navbarOpen}

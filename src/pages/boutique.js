@@ -14,7 +14,7 @@ const Boutique = ({ data })  => (
   <Layout>
           <Seo title="Boutique" />
           <section className="w-12/12">
-    <header className=" w-12/12 mb-32 ">
+    <header className=" w-12/12 mb-10 md:mb-32 ">
 
     <figure>
          <LogoBoutique />
@@ -23,22 +23,22 @@ const Boutique = ({ data })  => (
 </header>
 </section>
         <section className="w-10/12 m-auto flex flex-col justify-center ">
-<h1 className=" titre text-4xl mb-20"> Boutique</h1>
+<h1 className=" titre text-4xl mb-10 md:mb-20"> Boutique</h1>
 
-<div className="flex flex-col md:grid md:grid-cols-4 m-auto md:gap-y-10 md:gap-x-16 ">
+<div className="flex flex-col md:grid md:grid-cols-3 m-auto md:gap-y-10 md:gap-x-16 ">
     {   
-    data.allDatoCmsBoutique.edges.map(({ node }) => (
+    data.allSwellProduct.edges.map(({ node }) => (
 <>
-<article>
+<article className="mb-16 md:mb-0">
 
-      <Link to={node.url} > 
+      <Link to={node.slug} > 
       <figure className="">
 
-      <GatsbyImage image={node.imagesProduits[0].gatsbyImageData}           className="rounded-lg mb-2"
+      <GatsbyImage image={node.images[0].fileLocal.childImageSharp.gatsbyImageData}           className="rounded-lg mb-2"
  />
 </figure>
-<h2 className="text-lg text-center mb-1">{node.nomDuProduit}</h2>
-<p className="text-sm text-center text-gray-600">{node.prix} euros</p>
+<h2 className="text-lg text-center mb-1">{node.name}</h2>
+<p className="text-sm text-center text-gray-600">{node.price} euros</p>
 
 
 </Link>
@@ -55,19 +55,21 @@ const Boutique = ({ data })  => (
 export const query = graphql`
   {
     
-    allDatoCmsBoutique {
+    allSwellProduct {
       edges {
         node {
-          couleursTissuUni
-          description
+          slug
           id
-          nomDuProduit
-          prix
-          originalId
-          typeDeProduit
-          url
-          imagesProduits {
-            gatsbyImageData
+          price
+          name
+          images {
+            fileLocal {
+              childImageSharp {
+                gatsbyImageData
+              }
+            
+            }
+  
           }
         }
       }

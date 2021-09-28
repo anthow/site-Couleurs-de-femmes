@@ -9,10 +9,10 @@ exports.createPages = ({ graphql, actions }) => {
   // Variables can be added as the second function parameter
   return graphql(`
     query loadPagesQuery ($limit: Int!) {
-        allDatoCmsBoutique(limit: $limit) {
+      allSwellProduct(limit: $limit) {
         edges {
           node {
-            url
+            slug
             id
           }
         }
@@ -24,12 +24,12 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create article  pages.
-    result.data.allDatoCmsBoutique.edges.forEach(({ node }) => {
+    result.data.allSwellProduct.edges.forEach(({ node }) => {
       createPage({
         // Path for this page — required
-        path: `boutique/${node.url}`,
+        path: `boutique/${node.slug}`,
         component: articleTemplate  ,
-        context: { url: node.url},
+        context: { url: node.slug},
       })
     })
   })

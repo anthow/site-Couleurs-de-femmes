@@ -28,7 +28,7 @@ const IndexPage = ({ data }) =>(
          <Logo className="md:hidden" />
         </figure>
 </div>
-      <h1 className=" w-10/12 md:w-8/12 m-auto italic text-center text-3xl mt-10 mb-10 md:mb-24 " dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.titrePage }} >
+      <h1 className=" w-10/12 md:w-8/12 m-auto italic text-center text-3xl md:text-5xl mt-10 mb-10 md:mb-24 " dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.titrePage }} >
         </h1>
     </section>
   
@@ -37,7 +37,7 @@ const IndexPage = ({ data }) =>(
 
       <article className="text-sm order-2 mb-20">  
 
-        <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreDeuxAccouchements} </h2>
+        <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-2xl">{data.datoCmsPageDAccueil.titreDeuxAccouchements} </h2>
         <div dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteDeuxAccouchements }}>
           
         </div>
@@ -47,10 +47,10 @@ const IndexPage = ({ data }) =>(
 
       <article className="text-sm order-4 mb-20 md:order-3">
 
-      <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreTextileEco} </h2>
+      <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-2xl">{data.datoCmsPageDAccueil.titreTextileEco} </h2>
       <div className="mb-16" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteChoixValeurs }}>
 </div>  
-      <h2 className=" mt-10 md:mt-0  text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreChoixValeurs} </h2>
+      <h2 className=" mt-10 md:mt-0  text-center md:text-left  mb-8 font-bold text-2xl">{data.datoCmsPageDAccueil.titreChoixValeurs} </h2>
       <div dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteTextileEco }}>
 </div>
       </article>
@@ -59,7 +59,7 @@ const IndexPage = ({ data }) =>(
 
       <article className=" mb-20 text-sm order-6">
 
-      <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg ">{data.datoCmsPageDAccueil.titrePartenaireDeConfiance} </h2>
+      <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-2xl ">{data.datoCmsPageDAccueil.titrePartenaireDeConfiance} </h2>
       <div  dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.textePartenaireDeConfiance }}>
 </div>
       </article>
@@ -88,12 +88,12 @@ const IndexPage = ({ data }) =>(
       </figure>
     </section>
     <section className=" mt-10 w-10/12 md:w-8/12 m-auto ">
-    <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreConstat} </h2>
+    <h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-3xl">{data.datoCmsPageDAccueil.titreConstat} </h2>
       <article className="text-sm">
         
       <div className="mb-16" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteConstat  }}>
 </div>
-<h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-lg">{data.datoCmsPageDAccueil.titreToutesLesFemmes} </h2>
+<h2 className=" mt-10 md:mt-0 text-center md:text-left  mb-8 font-bold text-3xl">{data.datoCmsPageDAccueil.titreToutesLesFemmes} </h2>
 <div className="mb-20 md:mb-16" dangerouslySetInnerHTML={{ __html: data.datoCmsPageDAccueil.texteToutesLesFemmes  }}>
 </div>
       </article>
