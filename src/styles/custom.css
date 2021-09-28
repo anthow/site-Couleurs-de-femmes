@@ -16,38 +16,38 @@ header a, h1,h2,h3,h4,h5,h6{
 }
 
 .border{
-    border-color: #E8BB69;
+    border-color: #AE915A;
     border-radius: 15px;
 }
 
 .faq {
 
-    background-color: #855c18;
-    color:#f9d8a1
+    background-color: #AE915A;
+    color:white
 }
 
 .faq p, .faq h3, .faq h2       {
 
-    color:#f9d8a1
+    color:white
 }
 
 button.faq {
 
-    background-color:#f9d8a1;
-    color:white;
+    background-color:white;
+    color:#AE915A;
 
 }
 
  button.or{
 
-    background-color:#f9d8a1;
+    background-color:#AE915A;
     color:white;
 
 }
 
 .sub-menu :hover{
 
-background-color:#65430A;
+background-color:#AE915A;
 
 }
 

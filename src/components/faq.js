@@ -38,10 +38,7 @@ return (
       
         </section>
         <section className="w-10/12 md:w-8/12 pb-10 m-auto">
-        <button className=" text-white faq px-5 py-2 md:m-auto  rounded mb-10">  
-          <a href="https://www.facebook.com/couleursdefemme/" target="_blank" rel="noreferrer"> Page Facebook</a>
-        </button>
-
+      
         <button className="text-white faq px-5 py-2 ml-5 md:ml-10  md:m-auto rounded mb-10"> 
         <Link to="/faq">FAQ</Link> 
         </button>

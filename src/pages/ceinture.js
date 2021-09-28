@@ -31,7 +31,7 @@ const TutoCeinture = ({ data }) => (
             </figure>
 
             <article className=" ">
-                <h1 className="hidden md:block mb-5 text-4xl"> la ceinture</h1>
+                <h1 className="hidden md:block mb-5 text-4xl"> L    a ceinture</h1>
 
                 <div className="text-sm mb-5 w-10/12 md:w-12/12 m-auto md:m-0" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.texteIntroduction }}>
                 </div>
