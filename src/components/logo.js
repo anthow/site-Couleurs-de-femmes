@@ -9,7 +9,7 @@ export default function Logo() {
     query logoQuery {
       datoCmsLogo {
         logo {
-          gatsbyImageData(width: 500)
+          gatsbyImageData(width: 400)
           
         }
             
@@ -19,7 +19,7 @@ export default function Logo() {
   return (
 
     <header>
-      <figure  className=" flex mt-5 m-auto align-center justify-items-center items-center" >
+      <figure  className=" w-10/12 flex mt-5 m-auto align-center justify-items-center items-center" >
      <GatsbyImage className="m-auto"  image={data.datoCmsLogo.logo.gatsbyImageData}   />
      </figure>
     </header>

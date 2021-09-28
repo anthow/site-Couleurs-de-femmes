@@ -39,7 +39,7 @@ return (
       </figure> 
 <div className="flex flex-col">
     <h3 className="font-bold text-lg"> Adresse</h3>
-    <p className="text-sm text-left">{data.datoCmsContact.adresse} <br></br>
+    <p className="text-sm text-left adresse">{data.datoCmsContact.adresse} <br></br>
     {data.datoCmsContact.ville}</p>
 </div>
 </article>
