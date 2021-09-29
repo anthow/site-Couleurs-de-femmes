@@ -1,4 +1,6 @@
 import * as React from "react"
+//import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LogoBoutique from "../components/logo_boutique" 
@@ -34,14 +36,13 @@ const ProductPage = ({ data })  => (
 
       </figure>        
       </div>
-      <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[1].gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
+      {data.datoCmsBoutique.imagesProduits.map(images => {
+        return(      <figure className="hidden md:block">
+        <GatsbyImage image={images.gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
+  
+        </figure>  )
+      })}
 
-      </figure>        
-      <figure className="hidden md:block">
-      <GatsbyImage image={data.datoCmsBoutique.imagesProduits[2].gatsbyImageData}   className="rounded-lg mr-2 mb-2"/>
-
-    </figure>       
       </div>
       <article>
       <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
@@ -63,8 +64,8 @@ const ProductPage = ({ data })  => (
             data-item-custom1-name="Couleur tissus uni"
     data-item-custom1-options="bleu|ecru"
         
-        > ajouter au panier</button>
-        <button className="or p-2 text-sm md:text-lg rounded text-bold"> me contacter</button>
+        > Ajouter au panier</button>
+        <button className="or p-2 text-sm md:text-lg rounded text-bold"> Me contacter</button>
 </div>
       </article>
     </div>
