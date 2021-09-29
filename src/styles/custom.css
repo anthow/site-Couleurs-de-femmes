@@ -1,7 +1,12 @@
 p, label, span{
     font-family:"Nanum Gothic";
     color:#65430A;
-    text-align: justify;
+    text-align: justify !important;
+
+}
+
+p.text-center, label.text-center, span.text-center{
+    text-align: center !important;
 
 }
 
@@ -67,7 +72,7 @@ h1.titre{
   
 
   .fonta{
-      color:#f9d8a1;
+      color:#AE915A;
   }
 
     .adresse p{

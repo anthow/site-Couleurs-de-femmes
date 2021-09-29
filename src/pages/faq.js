@@ -1,11 +1,9 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import LogoBoutique from "../components/logo_boutique"
 import HeaderProvi from "../components/header-provi"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 const pageFaq = ({ data })  => (
 

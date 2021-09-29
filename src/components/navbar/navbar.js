@@ -2,21 +2,19 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./navarbarlinks"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 const Navigation = styled.nav`
-  height: 10vh;
+  height: auto;
   display: flex;
   background-color: #fff;
   justify-content: space-between;
+  width: 90%;
   margin: 0 auto;
-  padding: 0 5vw;
   z-index: 999;
   align-self: baseline;
-  align-items: center;
+  align-items: end;
 
   @media (max-width: 768px) {
     position: fixed;
@@ -25,6 +23,7 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
+    width:100%;
   }
 `
 
@@ -96,7 +95,7 @@ const Navbar = () => {
   return (
     <Navigation classname="align-center">
       <div classname=" ">
-        <h2 className="text-xl"> Couleurs de femmes </h2>
+        <h2 className="text-xl md:my-5"> Couleurs de femmes </h2>
       </div>
       <Toggle
         navbarOpen={navbarOpen}
@@ -117,8 +116,8 @@ const Navbar = () => {
           <NavbarLinks />
         </Navbox>
       )}
-      <article className="hidden md:block">
-        <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingCart} size="1x" className="fonta mr-2" />
+      <article className="hidden md:block md:my-5">
+        <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingCart} size="1x" className=" fonta mr-2" />
           <span className="snipcart-total-price"></span>
 
         </button>

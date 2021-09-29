@@ -25,7 +25,7 @@ return (
 <>
     
 <div className=" w-12/12  faq mt-20">
-      <h2 className=" w-10/12  m-auto pt-10 text-center text-3xl md:text-4xl font-bold  "> Foire aux questions </h2>
+      <h2 className=" w-10/12  m-auto pt-10 text-center text-3xl md:text-5xl font-bold  "> Foire aux questions </h2>
         <section className=" mt-10   w-10/12 md:w-8/12 m-auto md:grid grid-cols-1 grid-rows-4  md:grid-cols-2 md:grid-rows-2 auto-cols-max auto-rows-max gap-y-10 md:gap-y-10 md:gap-x-28 content-center">
         {data.allDatoCmsFaq.edges.map(({ node }, i) => (
             <article className="faq">
@@ -39,7 +39,7 @@ return (
         </section>
         <section className="w-10/12 md:w-8/12 pb-10 m-auto">
       
-        <button className="text-white faq px-5 py-2 ml-5 md:ml-10  md:m-auto rounded mb-10"> 
+        <button className="text-white faq px-5 py-2   md:m-auto rounded mb-10"> 
         <Link to="/faq">FAQ</Link> 
         </button>
         </section>

@@ -9,18 +9,21 @@ export default function LogoCollaboration() {
     query logoCollaborationQuery {
       datoCmsLogo {
         logoCollaboration {
-                gatsbyImageData(aspectRatio: 3.1 
-                  breakpoints: 10
-                  )
-
-            
+                gatsbyImageData(layout: FULL_WIDTH)
+          
         }
+        logoCollaborationSmartphone {
+          gatsbyImageData(layout: FULL_WIDTH)
+    
+  }
       }
     }
   `)
   return (
     <header>
-     <GatsbyImage  image={data.datoCmsLogo.logoCollaboration.gatsbyImageData}   className="w-full h-full" imgStyle={{objectFit: 'cover'}} />
+     <GatsbyImage  image={data.datoCmsLogo.logoCollaboration.gatsbyImageData}   className="hidden md:block"  />
+     <GatsbyImage  image={data.datoCmsLogo.logoCollaborationSmartphone.gatsbyImageData}   className="md:hidden"  />
+
     </header>
   )
 }

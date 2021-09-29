@@ -14,28 +14,42 @@ const collaboration = ({ data })  => (
     <section className="w-12/12">
     <header className=" w-12/12 mb-10  md:mb-32 ">
 
-    <figure>
+  
+        <HeaderProvi />
+        <figure>
          <LogoCollaboration />
         </figure>
-        <HeaderProvi />
 </header>
      
     </section>
-    <section className="md:w-10/12 m-auto  flex flex-col justify-center ">
-      <div className=" md:w-9/12 m-auto space-x-4 flex flex-col md:flex-row md:mb-16">
-        <GatsbyImage image={data.datoCmsCollaboration.imagesCollaboration[0].gatsbyImageData}           className="rounded-lg mb-2"
+    <article className="">
+    <h1 className=" w-10/12 md:w-8/12 m-auto mb-5 md:mb-0 mt-5 md:-mt-0 text-3xl md:text-5xl"> {data.datoCmsCollaboration.nomCollaboration}</h1>
+</article>
+    <section className="w-10/12 md:w-8/12 md:gap-x-10  md:gap-y-10 m-auto md:items-center flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-2  ">
+        <GatsbyImage image={data.datoCmsCollaboration.imageCollaboration.gatsbyImageData}           className="rounded-lg mb-2 order-1"
 
           />       
-
-        <article className=" md:w-2/3">
-          <h1 className="mb-5 mt-5 md:-mt-0 text-3xl md:text-4xl"> {data.datoCmsCollaboration.nomCollaboration}</h1>
-           <div className="text-sm m-auto w-10/12 md:12/12 mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsCollaboration.texteCollaboration }} />
+        <article className=" order-2">
+           <div className="text-sm m-auto  mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsCollaboration.texteCollaboration }} />
 
 
         </article>
-      </div>
-      <h1 className="  w-10/12 md:w-12/12 m-auto titre text-4xl mb-10 md:mb-20"> Les articles </h1>
-      <div className=" w-10/12 md:w-12/12 flex flex-col md:grid md:grid-cols-3 m-auto md:gap-y-10 md:gap-x-16 ">
+
+        <article className="order-4 md:order-3 ">
+           <div className="text-sm m-auto  mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsCollaboration.collaborationDeuxiemeParagraphe }} />
+           <div className="text-sm m-auto  mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsCollaboration.informationTechnique }} />
+
+
+        </article>
+        <GatsbyImage image={data.datoCmsCollaboration.imageCollaborationUn.gatsbyImageData}           className="order-3 md:order-4 rounded-lg mb-2" />
+</section>
+
+
+
+
+
+      <h1 className="  md:w-8/12 w-10/12 m-auto titre text-4xl mt-10 mb-10 md:mb-20"> Les articles </h1>
+      <div className=" md:w-8/12 w-10/12 flex flex-col md:grid md:grid-cols-3 m-auto md:gap-y-10 md:gap-x-16 ">
     {   
     data.allDatoCmsBoutique.edges.map(({ node }) => (
 <>
@@ -48,7 +62,7 @@ const collaboration = ({ data })  => (
  />
 </figure>
 <h2 className="text-lg text-center mb-1">{node.nomDuProduit}</h2>
-<p className="text-sm text-center text-gray-600">{node.prix} euros</p>
+<p className="text-sm text-center m-auto text-gray-600">{node.prix} euros</p>
 
 
 </Link>
@@ -58,7 +72,6 @@ const collaboration = ({ data })  => (
     ))}
    
 </div>
-</section>
   </Layout>
 )
 
@@ -67,7 +80,12 @@ export const query = graphql`
     datoCmsCollaboration {
         texteCollaboration
         nomCollaboration
-        imagesCollaboration {
+        collaborationDeuxiemeParagraphe
+        informationTechnique
+        imageCollaboration {
+          gatsbyImageData
+        }
+        imageCollaborationUn {
           gatsbyImageData
         }
       }

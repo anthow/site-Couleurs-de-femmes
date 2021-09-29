@@ -1,15 +1,31 @@
 import * as React from "react"
 import {  useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { StaticImage } from "gatsby-plugin-image"
 
 
 
 export default function LogoContact() {
-  return       <header>
-  <StaticImage src="../images/header-contact-couleursdefemmes.jpg" quality="90" className="hidden md:block" layout="fullWidth" aspectRatio={3/1} transformOptions="cropFocus" alt="Header image de la page d'acceuil du site couleurs de femmes" />  
-  <StaticImage src="../images/header-contact-couleursdefemmes.jpg" className=" md:hidden" layout="fullWidth" aspectRatio={5/4} transformOptions="cropFocus" alt="Header image de la page d'acceuil du site couleurs de femmes" />  
-  
+  const data = useStaticQuery(graphql`
+    query logoContactQuery {
+      datoCmsLogo {
+     
+            logoPageContact {
+              gatsbyImageData(layout: FULL_WIDTH
+                outputPixelDensities: 0.5     )
+            }
+            logoPageContactSmartphone {
+              gatsbyImageData(
+      height:1000)
+            }
+            
+      }
+    }
+  `)
+  return (
+    <header>
+     <GatsbyImage className="hidden md:block" image={data.datoCmsLogo.logoPageContact.gatsbyImageData}  />
+     <GatsbyImage className="md:hidden" image={data.datoCmsLogo.logoPageContactSmartphone.gatsbyImageData}  />
+
     </header>
-  
+  )
 }

@@ -1,11 +1,11 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Contactform from "./contactform"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "gatsby"
 
 
 export default function Footer() {
@@ -110,13 +110,14 @@ return (
         </section>
         <section className="w-10/12 md:w-8/12 m-auto">
       <article className="md:flex m-auto  justify-center space-x-4 w-10/12">
-        <p className="text-center"><a href="#"> condition générale de vente</a></p>
-        <p className="text-center"><a href="#"> politique de confidentialité</a></p>
-
+       <Link Link to="/condition"> <p className="text-center">
+condition générale de vente</p></Link>
+        <p className="text-center">  <Link Link to="/charte"> Charte de la protection des données</Link></p>
+        
       </article>
       <p className=" text-sm text-center">Copyright</p>
         </section>
     </footer>
 )
-}
+}   
 

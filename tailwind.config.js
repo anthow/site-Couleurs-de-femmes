@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         // Build your palette here
-        or: '#f9d8a1;',
+        or: '#AE915A;',
       }
     },
   },

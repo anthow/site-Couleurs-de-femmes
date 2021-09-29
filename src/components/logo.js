@@ -19,7 +19,7 @@ export default function Logo() {
   return (
 
     <header>
-      <figure  className=" w-10/12 flex mt-5 m-auto align-center justify-items-center items-center" >
+      <figure  className=" w-10/12  mt-5 m-auto align-center hidden md:flex justify-items-center items-center" >
      <GatsbyImage className="m-auto"  image={data.datoCmsLogo.logo.gatsbyImageData}   />
      </figure>
     </header>
