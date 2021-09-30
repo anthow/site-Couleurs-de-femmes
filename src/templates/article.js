@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HeaderProvi from "../components/header-provi"
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image"
 import { ImageGallery } from "../components/imagegallery/imagegallery"
 
@@ -21,7 +21,7 @@ const ProductPage = ({ data })  => (
 </header>
      
     </section>
-        <section className=" w-10/12 md:w-8/12 m-auto mb-20 flex flex-col  justify-center  ">
+        <section className=" w-10/12 md:w-8/12 m-auto flex flex-col  justify-center  ">
 <div className="flex flex-col md:flex-row    md:space-x-40 ">
 
 
@@ -35,23 +35,26 @@ const ProductPage = ({ data })  => (
       </div>
       <article>
       <h1 className=" text-3xl md:text-5xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
-      <p className=" bg-or text-white p-2 w-min text-center rounded font-black text-xl mb-4">{data.datoCmsBoutique.prix} euros</p>
+      <div className="flex flex-row items-center space-x-10 ">
+
+      <p className=" bg-or text-white p-2 w-max text-center rounded font-black text-xl ">{data.datoCmsBoutique.prix} euros</p>
       <p> poid: 200g </p> 
+      </div>
 <div className="flex flex-row mb-4 space-x-2 content-center ">
 
 
      </div>
-     <div className="flex flex-col space-x-2 mb-10">
+     <div className="flex flex-col mb-5">
     <p> Quantité </p>
     <input type="number" className="border text-or rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
 
 
 
-     <div className="flex flex-col space-x-2 mb-10">
+     <div className="flex flex-col mb-10">
      <p> Couleur du tissus uni </p>
 
-     <select id="tissus" className="border rounded px-2 w-min content-center"  
+     <select id="tissus" className="border rounded px-2 py-1 w-min content-center"  
      >
      {data.datoCmsBoutique.couleursUnies.map(node => {
              return(      <option className="text-or" value={node.nom}>{node.nom}</option>
@@ -74,8 +77,8 @@ const ProductPage = ({ data })  => (
     {data.datoCmsBoutique.couleursUnies.map((node) => {return((node.nom)+'|')})}
 
     > Commander </button>
-
-        <button className="or p-2 text-sm md:text-lg rounded text-bold"> Me contacter</button>
+<Link to="/contact">
+        <button className="or p-2 text-sm md:text-lg rounded text-bold"> Me contacter</button></Link>
 </div>
       </article>
     </div>

@@ -1,6 +1,8 @@
-p, label, span{
+
+
+p, label, span, select option.text-or{
     font-family:"Nanum Gothic";
-    color:#65430A;
+    color:#65430A ;
     text-align: justify !important;
 
 }
