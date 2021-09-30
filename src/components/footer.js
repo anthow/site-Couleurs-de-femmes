@@ -111,7 +111,7 @@ return (
         <section className="w-10/12 md:w-8/12 m-auto">
       <article className="md:flex m-auto  justify-center space-x-4 w-10/12">
        <Link Link to="/condition"> <p className="text-center">
-condition générale de vente</p></Link>
+Conditions générales de vente</p></Link>
         <p className="text-center">  <Link Link to="/charte"> Charte de la protection des données</Link></p>
         
       </article>

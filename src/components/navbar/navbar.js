@@ -9,9 +9,8 @@ const Navigation = styled.nav`
   height: auto;
   display: flex;
   background-color: #fff;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
+  justify-content: space-around;
+  width: 100%;
   z-index: 999;
   align-self: baseline;
   align-items: end;
@@ -95,9 +94,9 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation classname="items-centeralign-center">
+    <Navigation classname="items-center align-center">
       <div classname=" ">
-        <h2 className="text-xl mb-2"> Couleurs de femmes </h2>
+        <h2 className=" md:hidden text-xl md:my-5 "> Couleurs de femmes </h2>
       </div>
       <Toggle
         navbarOpen={navbarOpen}
@@ -107,7 +106,7 @@ const Navbar = () => {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <article className="mb-4">
+          <article className="">
             <button className="snipcart-checkout">panier</button>
           </article>
           <NavbarLinks />

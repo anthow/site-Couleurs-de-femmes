@@ -12,10 +12,9 @@ const pageFaq = ({ data })  => (
     <section className="w-12/12">
     <header className=" w-12/12 m   b-32 ">
 
-    <figure>
-         <LogoBoutique />
-        </figure>
         <HeaderProvi />
+        <LogoBoutique />
+
 </header>
      
 <div className=" w-12/12   mt-20">
