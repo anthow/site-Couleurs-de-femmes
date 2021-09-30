@@ -20,26 +20,7 @@ module.exports = {
     }
   },
 
-  {
-    resolve: 'gatsby-source-swell',
-    options: {
-      // The domain name of your Swell store. This is required.
-      storeId: 'couleurs-de-femmes',
-      // The key used to access your data by API. This is required.
-      secretKey: 'mZCDSTujtIG6UvHPPkN7llzy45aA8mbU',
-      // List of data types you want to fetch.
-      // Defaults to ['category', 'product'].
-      dataTypes: [
-        'category',
-        'product',
-        'attribute',
-        'variant',
-        'coupon',
-        'promotion',
-      ],
-    },
-  },
-
+  
 
   {
     resolve: `gatsby-plugin-snipcart-advanced`,
