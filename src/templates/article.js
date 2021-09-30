@@ -35,7 +35,7 @@ const ProductPage = ({ data })  => (
       </div>
       <article>
       <h1 className=" text-3xl md:text-5xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
-      <p className=" bg-or text-white p-2 w-1/3 text-center rounded font-black text-xl mb-4">{data.datoCmsBoutique.prix} euros</p>
+      <p className=" bg-or text-white p-2 w-min text-center rounded font-black text-xl mb-4">{data.datoCmsBoutique.prix} euros</p>
       <p> poid: 200g </p> 
 <div className="flex flex-row mb-4 space-x-2 content-center ">
 
