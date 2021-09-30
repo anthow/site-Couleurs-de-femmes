@@ -1,12 +1,10 @@
 import * as React from "react"
-//import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import LogoBoutique from "../components/logo_boutique" 
 import HeaderProvi from "../components/header-provi"
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image"
+import { ImageGallery } from "../components/imagegallery/imagegallery"
 
 const ProductPage = ({ data })  => (
 
@@ -18,7 +16,6 @@ const ProductPage = ({ data })  => (
     <header className=" w-12/12 mb-32 ">
 
     <figure>
-         <LogoBoutique />
         </figure>
         <HeaderProvi />
 </header>
@@ -30,18 +27,10 @@ const ProductPage = ({ data })  => (
 
     <div className="md:grid md:grid-cols-4 place-items-stretch space-y-5 w-5/12 " >
         <div className="col-span-4">
-
-        <figure className="">
-        <GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData}   className="rounded-lg mb-2 "/>
-
-      </figure>        
+<ImageGallery images={data.datoCmsBoutique.imagesProduits} />
+            
       </div>
-      {data.datoCmsBoutique.imagesProduits.map(images => {
-        return(      <figure className="hidden md:block">
-        <GatsbyImage image={images.gatsbyImageData}   className="rounded-lg mb-2 mr-2"/>
   
-        </figure>  )
-      })}
 
       </div>
       <article>
@@ -55,6 +44,21 @@ const ProductPage = ({ data })  => (
     <p> Quantité </p>
     <input type="number" className="border rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
+
+
+
+
+     <select id="tissus" className="hidden"  
+     >
+     {data.datoCmsBoutique.couleursUnies.map(node => {
+             return(      <option value={node.nom}>{node.nom}</option>
+
+      )
+    })}
+        
+   
+      
+    </select>
      <div className="flex flex-row space-x-2">
         <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
             data-item-id={data.datoCmsBoutique.id}
@@ -62,9 +66,11 @@ const ProductPage = ({ data })  => (
             data-item-url="/"
             data-item-name={data.datoCmsBoutique.nomDuProduit}
             data-item-custom1-name="Couleur tissus uni"
-    data-item-custom1-options="bleu|ecru"
-        
-        > Ajouter au panier</button>
+    data-item-custom1-options=
+    {data.datoCmsBoutique.couleursUnies.map((node) => {return((node.nom)+'|')})}
+
+    > Commander </button>
+
         <button className="or p-2 text-sm md:text-lg rounded text-bold"> Me contacter</button>
 </div>
       </article>
@@ -83,10 +89,14 @@ const ProductPage = ({ data })  => (
 export const query = graphql`
 query ProductPageQuery($url: String){
    datoCmsBoutique(url: {eq: $url}) {
-      couleursTissuUni
+    couleursUnies {
+      nom
+    }
       description
       imagesProduits {
-        gatsbyImageData
+        originalId
+        gatsbyImageData(aspectRatio: 1.1)
+        
       }
       id
       typeDeProduit

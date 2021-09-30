@@ -16,18 +16,21 @@ const Boutique = ({ data })  => (
     <header className=" w-12/12 mb-32 ">
 
     <figure>
-         <LogoBoutique />
         </figure>
         <HeaderProvi />
+        <LogoBoutique />
+
 </header>
 </section>
         <section className="w-10/12 m-auto flex flex-col justify-center ">
-<h1 className=" titre text-4xl mb-20"> Boutique</h1>
+<h1 className=" titre text-4xl mb-10"> Les Ceintures</h1>
 
-<div className="flex flex-col md:grid md:grid-cols-4 m-auto md:gap-y-10 md:gap-x-16 ">
+<div className="flex flex-col md: mb-20 md:grid md:grid-cols-3 m-auto md:gap-y-10 md:gap-x-16 ">
     {   
-    data.allDatoCmsBoutique.edges.map(({ node }) => (
-<>
+    
+    data.allDatoCmsBoutique.edges.map(({ node }) => {
+      if(node.typeDeProduit === "Ceinture")
+return(
 <article>
 
       <Link to={node.url} > 
@@ -43,11 +46,40 @@ const Boutique = ({ data })  => (
 </Link>
 </article>
 
-</>
-    ))}
+) })}
    
 </div>
 </section>
+
+<section className="w-10/12 m-auto flex flex-col justify-center ">
+<h1 className=" titre text-4xl mb-10"> La collaboration du moment</h1>
+
+<div className="flex flex-col md:grid md:grid-cols-3 m-auto md:gap-y-10 md:gap-x-16 ">
+    {   
+    
+    data.allDatoCmsBoutique.edges.map(({ node }) => {
+      if(node.typeDeProduit ==="Collaboration")
+return(
+<article>
+
+      <Link to={node.url} > 
+      <figure className="">
+
+      <GatsbyImage image={node.imagesProduits[0].gatsbyImageData}           className="rounded-lg mb-2"
+ />
+</figure>
+<h2 className="text-lg text-center mb-1">{node.nomDuProduit}</h2>
+<p className="text-sm text-center text-gray-600">{node.prix} euros</p>
+
+
+</Link>
+</article>
+
+) })}
+   
+</div>
+</section>
+
   </Layout>
 )
 

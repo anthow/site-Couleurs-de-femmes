@@ -115,7 +115,7 @@ condition générale de vente</p></Link>
         <p className="text-center">  <Link Link to="/charte"> Charte de la protection des données</Link></p>
         
       </article>
-      <p className=" text-sm text-center">Couleurs de Femmes - 2021</p>
+      <p className=" text-sm text-center">Couleurs de Femmes - 2021 </p>
         </section>
     </footer>
 )
