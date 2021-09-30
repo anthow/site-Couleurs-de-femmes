@@ -13,7 +13,7 @@ const ProductPage = ({ data })  => (
       <Layout>
           <Seo title="Boutique" />
           <section className="w-12/12">
-    <header className=" w-12/12 mb-32 ">
+    <header className=" w-12/12 mb-20 ">
 
     <figure>
         </figure>
@@ -34,24 +34,27 @@ const ProductPage = ({ data })  => (
 
       </div>
       <article>
-      <h1 className=" text-3xl md:text-4xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
-      <p className="mb-10">{data.datoCmsBoutique.prix} euros</p> 
+      <h1 className=" text-3xl md:text-5xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
+      <p className=" bg-or text-white p-2 w-1/3 text-center rounded font-black text-xl mb-4">{data.datoCmsBoutique.prix} euros</p>
+      <p> poid: 200g </p> 
 <div className="flex flex-row mb-4 space-x-2 content-center ">
 
 
      </div>
-     <div className="flex flex-row space-x-2 mb-10">
+     <div className="flex flex-col space-x-2 mb-10">
     <p> Quantité </p>
-    <input type="number" className="border rounded px-2 w-1/3 content-center " placeholder="1"></input>
+    <input type="number" className="border text-or rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
 
 
 
+     <div className="flex flex-col space-x-2 mb-10">
+     <p> Couleur du tissus uni </p>
 
-     <select id="tissus" className="hidden"  
+     <select id="tissus" className="border rounded px-2 w-min content-center"  
      >
      {data.datoCmsBoutique.couleursUnies.map(node => {
-             return(      <option value={node.nom}>{node.nom}</option>
+             return(      <option className="text-or" value={node.nom}>{node.nom}</option>
 
       )
     })}
@@ -59,6 +62,7 @@ const ProductPage = ({ data })  => (
    
       
     </select>
+    </div>
      <div className="flex flex-row space-x-2">
         <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
             data-item-id={data.datoCmsBoutique.id}
