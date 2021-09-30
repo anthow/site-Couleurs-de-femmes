@@ -14,7 +14,7 @@ export function ImageGallery({ selectedVariantImageId, images }) {
       };
     
     return(
-        <div className="md:grid md:grid-cols-4  grid-rows-2 place-items-stretch space-y-5  " >
+        <div className="md:grid md:grid-cols-4   place-items-stretch space-y-5  " >
             
             <figure className="col-span-4">
         <GatsbyImage image={activeImageThumbnail.gatsbyImageData}

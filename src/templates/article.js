@@ -21,18 +21,21 @@ const ProductPage = ({ data })  => (
 </header>
      
     </section>
-        <section className=" w-10/12 md:w-8/12 m-auto flex flex-col  justify-center  ">
+        <section className=" w-10/12 md:w-8/12 m-auto flex flex-col mb-10  justify-center  ">
 <div className="flex flex-col md:flex-row    md:space-x-40 ">
 
 
-    <div className="md:grid md:grid-cols-4 place-items-stretch space-y-5 w-5/12 " >
-        <div className="col-span-4">
+    <div className=" w-5/12 hidden md:block " >
 <ImageGallery images={data.datoCmsBoutique.imagesProduits} />
-            
-      </div>
-  
+             </div>
 
-      </div>
+
+    <div className=" md:hidden " >
+
+<GatsbyImage image={data.datoCmsBoutique.imagesProduits[0].gatsbyImageData} className="rounded mb-5" />
+             </div>
+
+
       <article>
       <h1 className=" text-3xl md:text-5xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
       <div className="flex flex-row items-center space-x-10 ">

@@ -24,6 +24,8 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
     width:100%;
+    padding-left:10px;
+
   }
 `
 
@@ -93,9 +95,9 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation classname="align-center">
+    <Navigation classname="items-centeralign-center">
       <div classname=" ">
-        <h2 className="text-xl md:my-5"> Couleurs de femmes </h2>
+        <h2 className="text-xl mb-2"> Couleurs de femmes </h2>
       </div>
       <Toggle
         navbarOpen={navbarOpen}
