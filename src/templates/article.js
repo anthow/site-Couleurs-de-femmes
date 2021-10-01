@@ -52,31 +52,15 @@ const ProductPage = ({ data })  => (
 
 
 
-     <div className="flex hidden flex-col mb-10">
-     <p> Couleur du tissus uni </p>
-
-     <select id="tissus" className="border  rounded px-2 py-1 w-min content-center"  
-     >
-     {data.datoCmsBoutique.couleursUnies.map(node => {
-             return(      <option className="text-or" value={node.nom}>{node.nom}</option>
-
-      )
-    })}
-        
-   
-      
-    </select>
-    </div>
+     
      <div className="flex flex-row space-x-2">
         <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
             data-item-id={data.datoCmsBoutique.id}
+            data-item-weight="300"
             data-item-price={data.datoCmsBoutique.prix}
-            data-item-url={'https://couleursdefemmes/'+data.datoCmsBoutique.url}
+            data-item-url={'https://couleursdefemmes/boutique/'+data.datoCmsBoutique.url}
             data-item-name={data.datoCmsBoutique.nomDuProduit}
-            data-item-custom1-name="Couleur tissus uni"
-    data-item-custom1-options=
-    {data.datoCmsBoutique.couleursUnies.map((node) => {return((node.nom)+'|')}).join('')}
-
+          
     > Commander </button>
 <Link to="/contact">
         <button className="or p-2 text-sm md:text-lg rounded text-bold"> Me contacter</button></Link>
