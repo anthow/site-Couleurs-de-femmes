@@ -58,7 +58,7 @@ const ProductPage = ({ data })  => (
             data-item-id={data.datoCmsBoutique.id}
             data-item-weight="300"
             data-item-price={data.datoCmsBoutique.prix}
-            data-item-url={'https://couleursdefemmes/boutique/'+data.datoCmsBoutique.url}
+            data-item-url={'https://hopeful-wright-6a9359.netlify.app/boutique/'+data.datoCmsBoutique.url}
             data-item-name={data.datoCmsBoutique.nomDuProduit}
           
     > Commander </button>
