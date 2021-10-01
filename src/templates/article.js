@@ -71,8 +71,7 @@ const ProductPage = ({ data })  => (
         <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
             data-item-id={data.datoCmsBoutique.id}
             data-item-price={data.datoCmsBoutique.prix}
-            data-item-image="/"
-            data-item-url={data.datoCmsBoutique.url}
+            data-item-url={'https://couleursdefemmes/'+data.datoCmsBoutique.url}
             data-item-name={data.datoCmsBoutique.nomDuProduit}
             data-item-custom1-name="Couleur tissus uni"
     data-item-custom1-options=

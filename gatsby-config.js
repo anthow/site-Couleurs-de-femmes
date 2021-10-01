@@ -26,11 +26,11 @@ module.exports = {
     resolve: `gatsby-plugin-snipcart-advanced`,
     options: {
       version: "3.0.29",
-      publicApiKey: "MTZjMGQ2ZjUtZTljOC00ZDBmLTg0MGYtOGE1ODQyZGY1MDk1NjM3NjU3MDI2ODgxNDkyNTg0", // use public api key here or in environment variable
+      publicApiKey: "MTBmZmRmZTItMzNjZS00MmI3LTg3ZjUtNTM5N2I5ODkzMjRkNjM3NDQ4NDY4NDkwMjUyMDA2", // use public api key here or in environment variable
       defaultLang: "fr",
       currency: "eur",
       openCartOnAdd: false,
-      useSideCart: false,
+      useSideCart: true,
       // be careful with this mode cart. The cart in this mode has a bug of scroll in firefox
       locales: {
         fr: {
@@ -63,7 +63,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-snipcart',
       options: {
-        apiKey: 'MTZjMGQ2ZjUtZTljOC00ZDBmLTg0MGYtOGE1ODQyZGY1MDk1NjM3NjU3MDI2ODgxNDkyNTg0',
+        apiKey: 'MTBmZmRmZTItMzNjZS00MmI3LTg3ZjUtNTM5N2I5ODkzMjRkNjM3NDQ4NDY4NDkwMjUyMDA2',
         autopop: false,
         defaultLang: "fr-FR",
         currency: "eur",
