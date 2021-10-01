@@ -74,7 +74,6 @@ const ProductPage = ({ data })  => (
             data-item-id={data.datoCmsBoutique.id}
             data-item-price={data.datoCmsBoutique.prix}
             data-item-image="/"
-            data-item-quantity={quantite}
             data-item-url={data.datoCmsBoutique.url}
             data-item-name={data.datoCmsBoutique.nomDuProduit}
             data-item-custom1-name="Couleur tissus uni"
