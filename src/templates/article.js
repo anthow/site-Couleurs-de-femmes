@@ -40,7 +40,7 @@ const ProductPage = ({ data })  => (
       <h1 className=" text-3xl md:text-5xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
 
       <p className=" bg-or text-white p-2 w-max text-center rounded font-black text-xl ">{data.datoCmsBoutique.prix} euros</p>
-      <p> poid: 200g </p> 
+      <p classNamem="mt-5 mb-10">  poid: {data.dadatoCmsBoutique.poids}g </p> 
 <div className="flex flex-row mb-4 space-x-2 content-center ">
 
 
@@ -56,7 +56,7 @@ const ProductPage = ({ data })  => (
      <div className="flex flex-row space-x-2">
         <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
             data-item-id={data.datoCmsBoutique.id}
-            data-item-weight="300"
+            data-item-weight={data.dadatoCmsBoutique.poids}
             data-item-price={data.datoCmsBoutique.prix}
             data-item-url={'https://couleursdefemmes.be/boutique/'+data.datoCmsBoutique.url}
             data-item-name={data.datoCmsBoutique.nomDuProduit}
@@ -84,6 +84,7 @@ query ProductPageQuery($url: String){
     couleursUnies {
       nom
     }
+    poids
       description
       imagesProduits {
         originalId
