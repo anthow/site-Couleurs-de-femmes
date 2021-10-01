@@ -4,7 +4,8 @@ const Contactform = () => (
 <>
     <h2 className="mb-10 mt-20 font-bold text-xl text-center"> Contactez-moi </h2>
         <section className=" w-10/12 md:w-6/12 m-auto mb-20"> 
-        <form className="flex flex-col ">
+        <form className="flex flex-col " action="https://formspree.io/f/xayakwbr"
+  method="POST">
             <label className="mb-5" htmlFor="nom">Nom</label>
             <input type="text" className="mb-5 border"></input>
             <label className="mb-5" htmlFor="mail">Adresse mail</label>

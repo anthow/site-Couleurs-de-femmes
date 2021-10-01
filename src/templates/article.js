@@ -49,7 +49,7 @@ const ProductPage = ({ data })  => (
      </div>
      <div className="flex flex-col mb-5">
     <p> Quantité </p>
-    <input type="number" className="border text-or rounded px-2 w-1/3 content-center " placeholder="1"></input>
+    <input type="number" name="quantite" className="border text-or rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
 
 
@@ -73,11 +73,13 @@ const ProductPage = ({ data })  => (
         <button className="or text-sm md:text-lg p-2 snipcart-add-item rounded text-bold"
             data-item-id={data.datoCmsBoutique.id}
             data-item-price={data.datoCmsBoutique.prix}
-            data-item-url="/"
+            data-item-image="/"
+            data-item-quantity={quantite}
+            data-item-url={data.datoCmsBoutique.url}
             data-item-name={data.datoCmsBoutique.nomDuProduit}
             data-item-custom1-name="Couleur tissus uni"
     data-item-custom1-options=
-    {data.datoCmsBoutique.couleursUnies.map((node) => {return((node.nom)+'|')})}
+    {data.datoCmsBoutique.couleursUnies.map((node) => {return((node.nom)+'|')}).join('')}
 
     > Commander </button>
 <Link to="/contact">

@@ -61,8 +61,8 @@ const collaboration = ({ data })  => (
       <GatsbyImage image={node.imagesProduits[0].gatsbyImageData}           className="rounded-lg mb-2"
  />
 </figure>
-<h2 className="text-lg text-center mb-1">{node.nomDuProduit}</h2>
-<p className="text-sm text-center m-auto text-gray-600">{node.prix} euros</p>
+<h2 className="text-xl text-center mb-1">{node.nomDuProduit}</h2>
+<p className="text-lg text-center m-auto text-gray-600">{node.prix} euros</p>
 
 
 </Link>
@@ -101,7 +101,7 @@ export const query = graphql`
           typeDeProduit
           url
           imagesProduits {
-            gatsbyImageData
+            gatsbyImageData(aspectRatio: 1.1)
           }
         }
       }

@@ -22,7 +22,7 @@ const TutoCeinture = ({ data }) => (
             </header>
 
         </section>
-        <section className="md:w-8/12  gap-x-12 m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-1  ">
+        <section className="md:w-8/12 w-10/12 gap-x-12 m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-1  ">
         <h1 className="md:hidden w-10/12 m-auto text-center md:w-12/12 mb-5 text-3xl"> La ceinture</h1>
             <figure className="mb-10 md:mt-2 md:-mb-0">
                 <GatsbyImage image={data.datoCmsTutoriel.imageVideoCeinture.gatsbyImageData} />
@@ -36,10 +36,10 @@ const TutoCeinture = ({ data }) => (
             </article>
         
         </section>
-        <section className="md:w-8/12  m-auto mt-10 md:mt-20">
+        <section className="md:w-8/12  w-10/12 m-auto mt-10 md:mt-20">
             <h1 className="mb-5 text-3xl md:text-5xl mb-10 text-center md:text-left"> Comment placer la ceinture ? </h1>
             </section>
-            <section className="md:w-8/12 md:items-center auto-cols-min  md:gap-y-24 md:gap-x-20 m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-1  ">
+            <section className="md:w-8/12  w-10/12 md:items-center auto-cols-min  md:gap-y-24 md:gap-x-20 m-auto flex flex-col justify-center md:grid md:grid-cols-2 md:grid-rows-1  ">
 
             <article className="order-2 md: order-1 w-12/12 mb-20 md:mb-0 md:w-12/12 m-auto md:m-0 ">
                     <h2 className=" text-2xl md:text-3xl mt-5 md:mt-0 mb-5"> Etape 1</h2>
@@ -57,16 +57,15 @@ const TutoCeinture = ({ data }) => (
 
                 </figure>
 
-                <article className=" mt-5 md:mt-0 mb-20 md:mb-0 order-4 w-10/12   md:w-12/12 md:m-0 m-auto">
-                    <h2 className=" text-2xl w-10/12 md:w-12/12 md:text-3xl mb-5"> Etape 2</h2>
-                    <div className="text-sm w-10/12 md:w-12/12" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.etape2 }} />
+                <article className="order-4  w-12/12 mb-20 md:mb-0 md:w-12/12 m-auto md:m-0 ">
+                <h2 className=" text-2xl md:text-3xl mt-5 md:mt-0 mb-5"> Etape 2</h2>
+                    <div className="text-sm" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.etape2 }} />
 
                 </article>
 
-             
 
 
-                <article className="order-6 md:order-5 w-10/12 mb-10 md:mb-0 md:w-12/12 m-auto">
+                <article className="order-6 md:order-5 w-12/12 mb-20 md:mb-0  m-auto md:m-0 ">
                     <h2 className=" text-2xl mt-5 md:mt-0 mb-5"> Etape 3: première méthode</h2>
                     <div className="text-sm" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.etape3 }} />
 
@@ -80,7 +79,7 @@ const TutoCeinture = ({ data }) => (
 
                 </article>
 
-                <article className="order-9  w-10/12 md:w-12/12 m-auto">
+                <article className="order-9  w-12/12 mb-20 md:mb-0  m-auto md:m-0 ">
                     <h2 className=" text-2xl md:text-3xl mt-5 md:mt-0 mb-5"> Etape 3 deuxième méthode</h2>
                     <div className="text-sm" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.texteEtapeTroisMethodeDeux}} />
 
