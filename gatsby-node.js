@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allDatoCmsBoutique.edges.forEach(({ node }) => {
       createPage({
         // Path for this page — required
-        path: `/${node.url}`,
+        path: `boutique/${node.url}`,
         component: articleTemplate  ,
         context: { url: node.url},
       })
