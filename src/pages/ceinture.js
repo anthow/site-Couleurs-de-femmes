@@ -66,7 +66,7 @@ const TutoCeinture = ({ data }) => (
 
 
                 <article className="order-6 md:order-5 w-12/12 mb-20 md:mb-0  m-auto md:m-0 ">
-                    <h2 className=" text-2xl mt-5 md:mt-0 mb-5"> Etape 3: première méthode</h2>
+                    <h2 className=" text-2xl md:text-3xl mt-5 md:mt-0 mb-5"> Etape 3: première méthode</h2>
                     <div className="text-sm" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.etape3 }} />
 
                 </article>
@@ -80,7 +80,7 @@ const TutoCeinture = ({ data }) => (
                 </article>
 
                 <article className="order-9  w-12/12 mb-20 md:mb-0  m-auto md:m-0 ">
-                    <h2 className=" text-2xl md:text-3xl mt-5 md:mt-0 mb-5"> Etape 3 deuxième méthode</h2>
+                    <h2 className=" text-2xl md:text-3xl mt-5 md:mt-0 mb-5"> Etape 3: deuxième méthode</h2>
                     <div className="text-sm" dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.texteEtapeTroisMethodeDeux}} />
 
                 </article>
@@ -92,8 +92,8 @@ const TutoCeinture = ({ data }) => (
 
 
         </section>
-
-        <article className="md:mt-20 col-span-2 text-sm w-10/12 md:w-8/12 m-auto " dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.prSentationCeinture }}>
+        <h2 className=" md:mt-20 col-span-2 text-3xl md:text-5xl w-10/12 md:w-8/12 m-auto"> Les différentes utilisations</h2>
+        <article className="md:mt-10 col-span-2 text-sm w-10/12 md:w-8/12 m-auto " dangerouslySetInnerHTML={{ __html: data.datoCmsTutoriel.prSentationCeinture }}>
 
 </article>
     </Layout>

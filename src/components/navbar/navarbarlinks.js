@@ -30,7 +30,7 @@ const NavbarLinks = () => {
 
         <li>
           <Link to="/ceinture">
-            la ceinture
+            La ceinture
           </Link>
         </li>
         <li>

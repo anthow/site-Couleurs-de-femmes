@@ -24,7 +24,6 @@ export default function LogoContact() {
   return (
     <header>
      <GatsbyImage className="hidden md:block" image={data.datoCmsLogo.logoPageContact.gatsbyImageData}  />
-     <GatsbyImage className="md:hidden" image={data.datoCmsLogo.logoPageContactSmartphone.gatsbyImageData}  />
 
     </header>
   )
