@@ -29,7 +29,7 @@ module.exports = {
       publicApiKey: "MTBmZmRmZTItMzNjZS00MmI3LTg3ZjUtNTM5N2I5ODkzMjRkNjM3NDQ4NDY4NDkwMjUyMDA2", // use public api key here or in environment variable
       defaultLang: "fr",
       currency: "eur",
-      openCartOnAdd: false,
+      openCartOnAdd: true,
       useSideCart: true,
       // be careful with this mode cart. The cart in this mode has a bug of scroll in firefox
       locales: {

@@ -5,12 +5,12 @@ import Logo from "../../components/logo"
 
 const NavbarLinks = () => {
   return (
-       <div className=" md:flex flex-col justify-items-center justify-center m-auto  w-12/12 text-xl    ">
+       <div className=" md:flex flex-col md:justify-items-center md:justify-center md:m-auto mt-10 md:-mt-0 text-center   w-12/12 text-xl    ">
 
     <figure className="hidden md:block">
          <Logo className="hidden md:block" />
         </figure> 
-      <ul className="flex flex-col md:flex-row justify-center space-x-5 md:my-5">
+      <ul className="flex flex-col md:flex-row justify-center md:space-x-5 md:my-5">
 
         <li>
           <Link to="/">

@@ -3,6 +3,8 @@ import styled from "styled-components"
 import NavbarLinks from "./navarbarlinks"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 
 const Navigation = styled.nav`
@@ -90,13 +92,15 @@ const Hamburger = styled.div`
     top: 10px;
   }
 `
-const Navbar = () => {
+const Navbar = ({ data }) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
     <Navigation classname="items-center align-center">
       <div classname=" ">
-        <h2 className=" md:hidden text-xl md:my-5 "> Couleurs de femmes </h2>
+      <Link to="/">
+        <h2 className=" md:hidden text-xl my-2 "> Couleurs de femmes </h2>
+        </Link>
       </div>
       <Toggle
         navbarOpen={navbarOpen}
@@ -106,8 +110,11 @@ const Navbar = () => {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <article className="">
-            <button className="snipcart-checkout">panier</button>
+          <article className="flex flex-col align-center">
+          <StaticImage className="w-8/12 mb-10 m-auto" src="../../images/cdflogoartprimarygold-1.jpg" alt="logo couleurs de femmes" />
+
+          <button className=" flex items-center align-center m-auto md:hidden snipcart-checkout"> <FontAwesomeIcon icon={faShoppingCart} size="1x" className=" m-auto fonta mr-2" />
+         <p> mon panier</p></button>
           </article>
           <NavbarLinks />
 
@@ -119,12 +126,13 @@ const Navbar = () => {
       )}
       <article className="hidden md:block md:my-5">
         <button className="snipcart-checkout"><FontAwesomeIcon icon={faShoppingCart} size="1x" className=" fonta mr-2" />
-          <span className="snipcart-total-price"></span>
+          <span> mon panier</span>
 
         </button>
       </article>
     </Navigation>
   )
 }
+
 
 export default Navbar
