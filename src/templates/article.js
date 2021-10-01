@@ -38,26 +38,24 @@ const ProductPage = ({ data })  => (
 
       <article>
       <h1 className=" text-3xl md:text-5xl mb-4 text-center md:text-left">{data.datoCmsBoutique.nomDuProduit}</h1>
-      <div className="flex flex-row items-center space-x-10 ">
 
       <p className=" bg-or text-white p-2 w-max text-center rounded font-black text-xl ">{data.datoCmsBoutique.prix} euros</p>
       <p> poid: 200g </p> 
-      </div>
 <div className="flex flex-row mb-4 space-x-2 content-center ">
 
 
      </div>
-     <div className="flex flex-col mb-5">
+     <div className="flex hidden flex-col mb-5">
     <p> Quantité </p>
-    <input type="number" name="quantite" className="border text-or rounded px-2 w-1/3 content-center " placeholder="1"></input>
+    <input type="number" name="quantite" className="  border text-or rounded px-2 w-1/3 content-center " placeholder="1"></input>
      </div>
 
 
 
-     <div className="flex flex-col mb-10">
+     <div className="flex hidden flex-col mb-10">
      <p> Couleur du tissus uni </p>
 
-     <select id="tissus" className="border rounded px-2 py-1 w-min content-center"  
+     <select id="tissus" className="border  rounded px-2 py-1 w-min content-center"  
      >
      {data.datoCmsBoutique.couleursUnies.map(node => {
              return(      <option className="text-or" value={node.nom}>{node.nom}</option>
