@@ -7,11 +7,11 @@ const Contactform = () => (
         <form className="flex flex-col " action="https://formspree.io/f/xayakwbr"
   method="POST">
             <label className="mb-5" htmlFor="nom">Nom</label>
-            <input type="text" name="nom" className="mb-5 border"></input>
+            <input type="text" name="nom" className="pl-2 mb-5 border"></input>
             <label className="mb-5" htmlFor="mail">Adresse mail</label>
-            <input type="mail" name="mail" className=" mb-5 border"></input>
+            <input type="mail" name="mail" className="pl-2  mb-5 border"></input>
             <label className="mb-5" name="message" htmlFor="message"> Message</label>
-            <textarea cols="25" className="h-20 border"></textarea>
+            <textarea cols="25" className=" pl-2 h-20 border"></textarea>
             <button className="mt-10 px-5 rounded font-bold py-2 or w-min" type="submit">envoyer</button>
         </form>
         </section>
