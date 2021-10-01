@@ -10,8 +10,8 @@ const Contactform = () => (
             <input type="text" name="nom" className="pl-2 mb-5 border"></input>
             <label className="mb-5" htmlFor="mail">Adresse mail</label>
             <input type="mail" name="mail" className="pl-2  mb-5 border"></input>
-            <label className="mb-5" name="message" htmlFor="message"> Message</label>
-            <textarea cols="25" className=" pl-2 h-20 border"></textarea>
+            <label className="mb-5"  htmlFor="message"> Message</label>
+            <textarea cols="25" name="message" className=" pl-2 h-20 border"></textarea>
             <button className="mt-10 px-5 rounded font-bold py-2 or w-min" type="submit">envoyer</button>
         </form>
         </section>
