@@ -10,7 +10,8 @@ module.exports = {
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
     `gatsby-transformer-remark`,
-    `gatsby-plugin-styled-components`,      
+    `gatsby-plugin-styled-components`,  
+    'gatsby-plugin-minify',    
 
 {
 

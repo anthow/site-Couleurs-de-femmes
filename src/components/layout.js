@@ -15,9 +15,18 @@
    
  
    return (
+
+
      <>
+     <head>
+...
+<link rel="stylesheet" type="text/css" href="../styles.print.css" media="print" />
+...
+</head>
+<body>
          <main>{children}</main>
          <Footer />
+         </body>
      </>
    )
  }
