@@ -27,7 +27,7 @@ module.exports = {
     resolve: `gatsby-plugin-snipcart-advanced`,
     options: {
       version: "3.0.29",
-      publicApiKey: "MTBmZmRmZTItMzNjZS00MmI3LTg3ZjUtNTM5N2I5ODkzMjRkNjM3NDQ4NDY4NDkwMjUyMDA2", // use public api key here or in environment variable
+      publicApiKey: "ODE0N2IyNzItZjFkMy00YjFkLWJhYmMtNjNhY2MxN2ZkODhlNjM3NDQ4NDY4NDkwMjUyMDA2", // use public api key here or in environment variable
       defaultLang: "fr",
       currency: "eur",
       openCartOnAdd: true,
@@ -64,7 +64,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-snipcart',
       options: {
-        apiKey: 'MTBmZmRmZTItMzNjZS00MmI3LTg3ZjUtNTM5N2I5ODkzMjRkNjM3NDQ4NDY4NDkwMjUyMDA2',
+        apiKey: 'ODE0N2IyNzItZjFkMy00YjFkLWJhYmMtNjNhY2MxN2ZkODhlNjM3NDQ4NDY4NDkwMjUyMDA2',
         autopop: false,
         defaultLang: "fr-FR",
         currency: "eur",
