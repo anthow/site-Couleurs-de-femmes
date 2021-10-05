@@ -18,7 +18,6 @@
 
 
      <>
-...
          <main>{children}</main>
          <Footer />
      </>
