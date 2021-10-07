@@ -115,6 +115,19 @@ module.exports = {
       },
     },
 
+
+
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '4',
+        matomoUrl: 'http://matomo.anthonyenglebert.be',
+        siteUrl: 'https://couleursdefemmes.be/'
+      }
+    },
+
+
+
     {
       resolve: `gatsby-source-datocms`,
       options: {
