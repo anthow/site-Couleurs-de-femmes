@@ -7,8 +7,9 @@ const condition = ({ data })  => (
 
   <Layout>
     <Seo title="condition générale de vente" />
+    <header>
     <HeaderProvi />
-
+</header>
     <section className="w-10/12 m-auto mt-10">
     <div className="text-sm m-auto w-10/12 md:12/12 mb-5" dangerouslySetInnerHTML={{ __html: data.datoCmsConditionsEtCharte.condition }} />
   
