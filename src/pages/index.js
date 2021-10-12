@@ -89,7 +89,6 @@ const IndexPage = ({ data }) =>(
     
   
 
-
     <section className=" mt-10 md:mt-20 w-12/12 m-auto">
       <figure className="place-self-center  "
       >    <GatsbyImage image={data.datoCmsPageDAccueil.imageCeinture.gatsbyImageData} />

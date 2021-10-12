@@ -45,8 +45,8 @@ module.exports = {
       // not work on dev. Gatsby not serve html file in dev https://github.com/gatsbyjs/gatsby/issues/13072
       innerHTML: `
           <billing section="bottom">
-              <!-- Customization goes here -->
-          </billing>`,
+          <snipcart-checkbox name="privacy-policy" required></snipcart-checkbox>
+          <snipcart-label for="privacy-policy">J'ai lu et approuvé les;<a href="https://couleursdefemmes.be/condition">Conditions générales de vente</a></snipcart-label>          </billing>`,
     },
   },
 
