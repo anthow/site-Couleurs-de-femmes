@@ -61,16 +61,7 @@ module.exports = {
       },
     },
 
-    {
-      resolve: 'gatsby-plugin-snipcart',
-      options: {
-        apiKey: 'ODE0N2IyNzItZjFkMy00YjFkLWJhYmMtNjNhY2MxN2ZkODhlNjM3NDQ4NDY4NDkwMjUyMDA2',
-        autopop: false,
-        defaultLang: "fr-FR",
-        currency: "eur",
-      }
-    },
-    {
+        {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
