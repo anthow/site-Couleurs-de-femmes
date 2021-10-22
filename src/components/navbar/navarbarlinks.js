@@ -39,6 +39,11 @@ const NavbarLinks = () => {
           </Link>
         </li>
         <li>
+          <Link to="/actu">
+            Actualités
+          </Link>
+        </li>
+        <li>
           <Link to="/contact">
             Contact
           </Link>
